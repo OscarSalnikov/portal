@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaby • Профиль</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- PAGE: Profile -->
+    <header>
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-dot"></span>
+          Collaby
+        </div>
+        <nav aria-label="Основная навигация">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="kanban.html">Kanban</a></li>
+            <li><a href="profile.html">Профиль</a></li>
+          </ul>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn btn-light" href="dashboard.html">Вернуться</a>
+          <a class="btn btn-secondary" href="index.html">Выход</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container scroll-animate">
+        <div class="card profile-card">
+          <img src="assets/avatar-default.svg" alt="Аватар Nova" class="avatar" />
+          <div>
+            <p class="pill">Product Lead</p>
+            <h1>Nova Bright</h1>
+            <p>Коллаб мейкер, фасилитатор спринтов и наставник для новых членов команды.</p>
+            <div class="chip-list">
+              <span class="chip">Streak 28</span>
+              <span class="chip">Mentor Rank</span>
+              <span class="chip">Design Sprint Coach</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container scroll-animate delay-1">
+        <!-- SECTION: Profile XP -->
+        <div class="profile-grid">
+          <div class="card">
+            <h2>XP уровень</h2>
+            <div class="experience">
+              <div>
+                <p>Текущий ранг</p>
+                <p class="xp-level">27</p>
+                <p>Mentor Rank · 450 XP до «Oracle»</p>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 68%;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Фокус недели</h2>
+            <p>1. Провести customer discovery.</p>
+            <p>2. Настроить автоматический XP дайджест.</p>
+            <p>3. Прокачать питомца до уровня Rare.</p>
+          </div>
+          <div class="card">
+            <h2>Командные роли</h2>
+            <div class="chip-list">
+              <span class="chip">Product Owner</span>
+              <span class="chip">Design Ops</span>
+              <span class="chip">Squad Lead</span>
+            </div>
+            <p>Балансирует стратегию продукта и команды, ведёт weekly sync.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container scroll-animate delay-2">
+        <div class="achievement-grid">
+          <div class="card achievement-card">
+            <h3>Achievements</h3>
+            <p>Unlock rate 86%</p>
+          </div>
+          <div class="card achievement-card">
+            <h3>Stargazer</h3>
+            <p>Открыл 5 новых фич, предложенных комьюнити.</p>
+          </div>
+          <div class="card achievement-card">
+            <h3>Guardian</h3>
+            <p>Закрыл 10 критичных багов до релиза.</p>
+          </div>
+          <div class="card achievement-card">
+            <h3>Pulse Master</h3>
+            <p>Провёл 12 health-check сессий.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container scroll-animate delay-3">
+        <div class="profile-grid">
+          <div class="card">
+            <h2>Виртуальный питомец</h2>
+            <div class="pet-card">
+              <img src="assets/pet-companion.svg" alt="Виртуальный питомец Collaby" />
+              <div>
+                <p class="pill" style="background:rgba(250,204,21,0.3);color:#b45309;">Rare · Comet Fox</p>
+                <p>Настроение: Радость · XP буст +8%</p>
+                <p>Квест: заведи 3 созвона онбординга.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Журнал событий</h2>
+            <p>+120 XP · Проведён lightning demo</p>
+            <p>+90 XP · Настроен weekly digest</p>
+            <p>+60 XP · Помощь в QA</p>
+            <p>+40 XP · Участие в community AMA</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="logo">
+            <span class="logo-dot"></span>
+            Collaby
+          </p>
+          <p>Система управления проектами с элементами геймификации для команд любого масштаба.</p>
+        </div>
+        <div>
+          <strong>Навигация</strong>
+          <p><a href="dashboard.html">Dashboard</a></p>
+          <p><a href="kanban.html">Kanban Board</a></p>
+          <p><a href="profile.html">Профиль</a></p>
+        </div>
+        <div>
+          <strong>Контакты</strong>
+          <p>support@collaby.dev</p>
+          <p>+7 (495) 555-21-00</p>
+          <p>Slack: @CollabyHQ</p>
+        </div>
+        <div>
+          <strong>Соцсети</strong>
+          <p><a href="#">Behance</a> · <a href="#">Dribbble</a> · <a href="#">GitHub</a></p>
+        </div>
+      </div>
+      <div class="container">
+        <small>© 2025 Collaby. Все права защищены.</small>
+      </div>
+    </footer>
+  </body>
+</html>

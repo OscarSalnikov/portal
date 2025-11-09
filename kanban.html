@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaby • Kanban Board</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- PAGE: Kanban Board -->
+    <header>
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-dot"></span>
+          Collaby
+        </div>
+        <nav aria-label="Основная навигация">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="kanban.html">Kanban</a></li>
+            <li><a href="profile.html">Профиль</a></li>
+          </ul>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn btn-light" href="dashboard.html">Обзор</a>
+          <a class="btn btn-secondary" href="profile.html">Мой профиль</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="hero">
+          <div class="scroll-animate">
+            <p class="pill">Kanban • Drag & Glow</p>
+            <h1>Управляй потоком задач с визуальными подсказками.</h1>
+            <p>
+              Карточки реагируют на наведение и подсказывают приоритет через цветовые индикаторы.
+              Перетаскивание демонстрационное — интегрируйте JS/Backend API, чтобы оживить процесс.
+            </p>
+            <div class="chip-list">
+              <span class="chip">WIP лимиты</span>
+              <span class="chip">XP бонусы</span>
+              <span class="chip">Статусы</span>
+            </div>
+          </div>
+          <div class="card scroll-animate delay-1">
+            <h2>Guidelines</h2>
+            <p>1. В колонке до 4 активных карточек.</p>
+            <p>2. Отмечай XP награды, чтобы мотивировать владельца.</p>
+            <p>3. После drag'n'drop обновляй backend через API.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container scroll-animate delay-2">
+        <div class="kanban-board">
+          <div class="kanban-column">
+            <h3>To Do <small>4</small></h3>
+            <!-- COMPONENT: Task Card -->
+            <div class="kanban-card">
+              <p class="pill">UX Research</p>
+              <h3>Интервью с 5 клиентами</h3>
+              <p>Определи основные триггеры вовлечения.</p>
+              <div class="task-meta">
+                <span>Владелец: Соня</span>
+                <span>XP +80</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <p class="pill">Product</p>
+              <h3>Описать roadmap Q4</h3>
+              <p>Сформировать 3 эпика и KPI.</p>
+              <div class="task-meta">
+                <span>Владелец: Влад</span>
+                <span>XP +120</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <p class="pill">Design</p>
+              <h3>Геймифицированные бейджи</h3>
+              <p>Сделать 6 редких рангов.</p>
+              <div class="task-meta">
+                <span>Владелец: Ада</span>
+                <span>XP +140</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="kanban-column">
+            <h3>In Progress <small>3</small></h3>
+            <div class="kanban-card">
+              <p class="pill" style="background:rgba(147,51,234,0.12);color:var(--secondary);">
+                DevOps
+              </p>
+              <h3>CI пайплайн для фич веток</h3>
+              <p>Добавить автоматические visual regression тесты.</p>
+              <div class="task-meta">
+                <span>Владелец: Сергей</span>
+                <span>XP +200</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <p class="pill" style="background:rgba(250,204,21,0.3);color:#b45309;">Growth</p>
+              <h3>Gamification onboarding</h3>
+              <p>Создать квест «первые 7 дней».</p>
+              <div class="task-meta">
+                <span>Владелец: Надя</span>
+                <span>XP +90</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <p class="pill" style="background:rgba(37,99,235,0.12);color:var(--primary);">
+                Analytics
+              </p>
+              <h3>Дашборд Retention 2.0</h3>
+              <p>Добавить сегменты команд и XP динамику.</p>
+              <div class="task-meta">
+                <span>Владелец: Игорь</span>
+                <span>XP +150</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="kanban-column">
+            <h3>Done <small>5</small></h3>
+            <div class="kanban-card">
+              <p class="pill" style="background:rgba(16,185,129,0.2);color:#047857;">Dev</p>
+              <h3>API для XP-механик</h3>
+              <p>Слои начисления и ревока наград.</p>
+              <div class="task-meta">
+                <span>Владелец: Никита</span>
+                <span>XP +260</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <p class="pill" style="background:rgba(96,165,250,0.2);color:#1d4ed8;">Community</p>
+              <h3>Набор стикеров Collaby</h3>
+              <p>Раздано 250 набора в Slack.</p>
+              <div class="task-meta">
+                <span>Владелец: Мила</span>
+                <span>XP +40</span>
+              </div>
+            </div>
+            <div class="kanban-card">
+              <p class="pill" style="background:rgba(244,114,182,0.2);color:#be185d;">QA</p>
+              <h3>Regression pack 2.7</h3>
+              <p>Покрыто 120 сценариев.</p>
+              <div class="task-meta">
+                <span>Владелец: Антон</span>
+                <span>XP +110</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="logo">
+            <span class="logo-dot"></span>
+            Collaby
+          </p>
+          <p>Система управления проектами с элементами геймификации для команд любого масштаба.</p>
+        </div>
+        <div>
+          <strong>Навигация</strong>
+          <p><a href="dashboard.html">Dashboard</a></p>
+          <p><a href="kanban.html">Kanban Board</a></p>
+          <p><a href="profile.html">Профиль</a></p>
+        </div>
+        <div>
+          <strong>Контакты</strong>
+          <p>support@collaby.dev</p>
+          <p>+7 (495) 555-21-00</p>
+          <p>Slack: @CollabyHQ</p>
+        </div>
+        <div>
+          <strong>Соцсети</strong>
+          <p><a href="#">Behance</a> · <a href="#">Dribbble</a> · <a href="#">GitHub</a></p>
+        </div>
+      </div>
+      <div class="container">
+        <small>© 2025 Collaby. Все права защищены.</small>
+      </div>
+    </footer>
+  </body>
+</html>

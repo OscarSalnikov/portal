@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Студенческий портал — Уведомления</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="notifications">
+    <div class="app-shell">
+      <div class="sidebar-slot" data-include="components/sidebar.html"></div>
+      <main class="main-area">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Студенческий портал</p>
+            <h1>Уведомления</h1>
+            <p>Все события портала и push-сообщения находятся здесь.</p>
+          </div>
+          <button class="ghost-button" aria-label="ночной режим">
+            <i data-feather="moon"></i>
+          </button>
+        </header>
+
+        <section class="card">
+          <div class="tabs" data-tabs>
+            <button class="tab-button active" data-tab-target="portal">Портал</button>
+            <button class="tab-button" data-tab-target="push">Push</button>
+          </div>
+          <div class="tab-panel active" data-tab-panel="portal">
+            <div class="notification-card success">
+              <h4>Оценка выставлена</h4>
+              <p>Вам выставлена оценка по курсу UX/UI дизайн — 9 баллов</p>
+              <time>15 сентября 2025, 14:30</time>
+            </div>
+            <div class="notification-card info">
+              <h4>Экзамен назначен</h4>
+              <p>Экзамен по Базам данных — 28 мая 2025, 16:20</p>
+              <time>28 мая 2025, 16:20</time>
+            </div>
+          </div>
+          <div class="tab-panel" data-tab-panel="push">
+            <div class="notification-card" style="border-color: #a855f7">
+              <h4>Напоминание</h4>
+              <p>Capstone Project 1 — дедлайн через 2 дня</p>
+              <time>11 мая 2025, 08:00</time>
+            </div>
+            <div class="notification-card" style="border-color: #f97316">
+              <h4>Расписание обновлено</h4>
+              <p>Практика по UX/UI перенесена на пятницу</p>
+              <time>10 мая 2025, 12:40</time>
+            </div>
+          </div>
+        </section>
+
+        <div class="bottom-nav-slot" data-include="components/bottom-nav.html"></div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

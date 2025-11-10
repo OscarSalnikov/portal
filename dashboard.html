@@ -1,226 +1,94 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Collaby • Dashboard</title>
+    <title>Студенческий портал — Панель</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <!-- PAGE: Dashboard -->
-    <header>
-      <div class="container header-inner">
-        <div class="logo">
-          <span class="logo-dot"></span>
-          Collaby
-        </div>
-        <nav aria-label="Основная навигация">
-          <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="kanban.html">Kanban</a></li>
-            <li><a href="profile.html">Профиль</a></li>
-          </ul>
-        </nav>
-        <div class="nav-cta">
-          <a class="btn btn-light" href="kanban.html">Kanban</a>
-          <a class="btn btn-secondary" href="profile.html">Профиль</a>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="container">
-        <div class="hero">
-          <div class="scroll-animate">
-            <p class="pill">Команда Nova Labs</p>
-            <h1>Обзор спринта · Неделя 42</h1>
-            <p>
-              Обновления задач, фокусные проекты и общая динамика XP команды. Протяни карточки в kanban,
-              чтобы удерживать поток задач без блокеров.
-            </p>
-            <div class="chip-list">
-              <span class="chip">4 проекта</span>
-              <span class="chip">18 активных задач</span>
-              <span class="chip">XP буст +12%</span>
-            </div>
+  <body data-page="dashboard">
+    <div class="app-shell">
+      <div class="sidebar-slot" data-include="components/sidebar.html"></div>
+      <main class="main-area">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Студенческий портал</p>
+            <h1>Добро пожаловать, Оскар!</h1>
+            <p>Следите за курсами, расписанием и новостями кампуса в одном месте.</p>
           </div>
-          <div class="card scroll-animate delay-1">
-            <h2>Спринт «Orbit»</h2>
-            <p>Глобальный прогресс</p>
-            <div class="progress-track">
-              <div class="progress-fill" style="width: 74%;"></div>
-            </div>
-            <div class="experience">
-              <div>
-                <p>Stories done</p>
-                <p class="stat-value">37/50</p>
+          <button class="ghost-button" id="settings">Дневной режим</button>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-tile">
+            <div class="label">Всего курсов</div>
+            <div class="value">6</div>
+          </article>
+          <article class="stat-tile">
+            <div class="label">Средний балл</div>
+            <div class="value">4.2</div>
+          </article>
+          <article class="stat-tile">
+            <div class="label">Посещаемость</div>
+            <div class="value">85%</div>
+          </article>
+          <article class="stat-tile">
+            <div class="label">Активные уведомления</div>
+            <div class="value">3</div>
+          </article>
+        </section>
+
+        <section class="stats-columns">
+          <article class="card">
+            <h2>Ближайшие занятия</h2>
+            <div class="courses-list">
+              <div class="course-card schedule-card">
+                <div class="course-top">
+                  <div>
+                    <strong>UX/UI дизайн</strong>
+                    <div class="muted">11:05 — 11:55</div>
+                  </div>
+                  <span class="badge success">Лекция</span>
+                </div>
+                <div class="muted">Имамадтинова К.Ф. · ККЦУ 402</div>
+                <div class="progress-bar"><span style="width: 85%"></span></div>
               </div>
-              <div>
-                <p>Velocity</p>
-                <p class="stat-value">54</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="container scroll-animate delay-1">
-        <div class="stat-grid">
-          <div class="card stat-card">
-            <h3>XP команды</h3>
-            <p class="stat-value">12 450</p>
-            <p>+640 за последние 24 часа.</p>
-          </div>
-          <div class="card stat-card">
-            <h3>Burn-down</h3>
-            <p class="stat-value">78%</p>
-            <p>На 6% быстрее, чем прошлый спринт.</p>
-          </div>
-          <div class="card stat-card">
-            <h3>Happy Meter</h3>
-            <p class="stat-value">8.9/10</p>
-            <p>Настроение команды стабильно высокое.</p>
-          </div>
-          <div class="card stat-card">
-            <h3>Collab Score</h3>
-            <p class="stat-value">92</p>
-            <p>Совместная работа без блокеров.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="container scroll-animate delay-2">
-        <div class="task-grid">
-          <!-- COMPONENT: Task Card -->
-          <div class="card task-card">
-            <div class="task-meta">
-              <span class="pill">To Do</span>
-              <span>#PRJ-204</span>
-            </div>
-            <h3>Собрать UI-kit для новой маркетинговой кампании</h3>
-            <p>Согласовать дизайн-систему с руководителем продукта.</p>
-            <div class="task-meta">
-              <span>Ответственный: Мария</span>
-              <span>XP: +120</span>
-            </div>
-          </div>
-          <div class="card task-card">
-            <div class="task-meta">
-              <span class="pill" style="background:rgba(147,51,234,0.12);color:var(--secondary);"
-                >In Progress</span
-              >
-              <span>#PRJ-189</span>
-            </div>
-            <h3>Интеграция real-time уведомлений</h3>
-            <p>Подключить WebSocket слой к backend API v2.</p>
-            <div class="task-meta">
-              <span>Ответственный: Тимофей</span>
-              <span>XP: +200</span>
-            </div>
-          </div>
-          <div class="card task-card">
-            <div class="task-meta">
-              <span class="pill" style="background:rgba(250,204,21,0.2);color:#b45309;">Review</span>
-              <span>#PRJ-176</span>
-            </div>
-            <h3>Записать walkthrough Collaby для партнёров</h3>
-            <p>Видеосессия на 8 минут + скрипт для продаж.</p>
-            <div class="task-meta">
-              <span>Ответственный: Лена</span>
-              <span>XP: +90</span>
-            </div>
-          </div>
-          <div class="card task-card">
-            <div class="task-meta">
-              <span class="pill" style="background:rgba(16,185,129,0.15);color:#047857;">Done</span>
-              <span>#PRJ-160</span>
-            </div>
-            <h3>Внедрить weekly XP дайджест</h3>
-            <p>Еженедельная рассылка с прогрессом по целям.</p>
-            <div class="task-meta">
-              <span>Ответственный: Яна</span>
-              <span>XP: +60</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="container scroll-animate delay-3">
-        <!-- SECTION: Profile XP -->
-        <div class="card">
-          <div class="experience">
-            <div>
-              <p class="pill">Лидер недели</p>
-              <h2>XP уровня: 27 · Mentor Rank</h2>
-              <p>
-                Продолжай закрывать спринтовые цели, чтобы открыть новый набор достижений и редкий скин для
-                питомца.
-              </p>
-              <div class="chip-list">
-                <span class="chip">Streak 12</span>
-                <span class="chip">Support Hero</span>
-                <span class="chip">Zero Bugs</span>
+              <div class="course-card schedule-card orange">
+                <div class="course-top">
+                  <div>
+                    <strong>Capstone Project 1</strong>
+                    <div class="muted">13:15 — 14:05</div>
+                  </div>
+                  <span class="badge">Практика</span>
+                </div>
+                <div class="muted">Утегенова А.У. · ГУК 333</div>
+                <div class="progress-bar"><span style="width: 78%"></span></div>
               </div>
             </div>
-            <div class="progress-track">
-              <div class="progress-fill" style="width: 62%;"></div>
+          </article>
+
+          <article class="card">
+            <h2 id="umkd">Последние уведомления</h2>
+            <div class="notification-card success">
+              <h4>Оценка выставлена</h4>
+              <p>UX/UI дизайн · 9 баллов</p>
+              <time>15 сентября 2025, 14:30</time>
             </div>
-          </div>
-        </div>
-      </section>
+            <div class="notification-card info">
+              <h4>Экзамен назначен</h4>
+              <p>Базы данных и разработка приложений · 28 мая 2025</p>
+              <time>28 мая 2025, 16:20</time>
+            </div>
+          </article>
+        </section>
 
-      <section class="container scroll-animate delay-3">
-        <div class="achievement-grid">
-          <div class="card achievement-card">
-            <h3>Achievement · Sprint Zen</h3>
-            <p>3 спринта подряд без горящих задач.</p>
-          </div>
-          <div class="card achievement-card">
-            <h3>Achievement · Mentor</h3>
-            <p>5 менторских сессий за месяц.</p>
-          </div>
-          <div class="card achievement-card">
-            <h3>Achievement · Visionary</h3>
-            <p>Предложено 10+ улучшений продукта.</p>
-          </div>
-          <div class="card achievement-card">
-            <h3>Achievement · Beast Mode</h3>
-            <p>Закрыто 25 story points за день.</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <p class="logo">
-            <span class="logo-dot"></span>
-            Collaby
-          </p>
-          <p>Система управления проектами с элементами геймификации для команд любого масштаба.</p>
-        </div>
-        <div>
-          <strong>Навигация</strong>
-          <p><a href="dashboard.html">Dashboard</a></p>
-          <p><a href="kanban.html">Kanban Board</a></p>
-          <p><a href="profile.html">Профиль</a></p>
-        </div>
-        <div>
-          <strong>Контакты</strong>
-          <p>support@collaby.dev</p>
-          <p>+7 (495) 555-21-00</p>
-          <p>Slack: @CollabyHQ</p>
-        </div>
-        <div>
-          <strong>Соцсети</strong>
-          <p><a href="#">Behance</a> · <a href="#">Dribbble</a> · <a href="#">GitHub</a></p>
-        </div>
-      </div>
-      <div class="container">
-        <small>© 2025 Collaby. Все права защищены.</small>
-      </div>
-    </footer>
+        <div class="bottom-nav-slot" data-include="components/bottom-nav.html"></div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Студенческий портал — Расписание</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="schedule">
+    <div class="app-shell">
+      <div class="sidebar-slot" data-include="components/sidebar.html"></div>
+      <main class="main-area">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Студенческий портал</p>
+            <h1>Расписание</h1>
+            <p>Планируйте неделю и следите за посещаемостью каждого занятия.</p>
+          </div>
+          <button class="ghost-button">Сменить неделю</button>
+        </header>
+
+        <section class="card">
+          <div class="stats-grid">
+            <div class="stat-tile">
+              <div class="label">Сегодня занятий</div>
+              <div class="value">4</div>
+            </div>
+            <div class="stat-tile">
+              <div class="label">Средний балл</div>
+              <div class="value">4.2</div>
+            </div>
+            <div class="stat-tile">
+              <div class="label">Эта неделя</div>
+              <div class="value">21 &nbsp;–&nbsp; 27</div>
+            </div>
+          </div>
+          <div class="week-picker">
+            <div class="week-day">ПН</div>
+            <div class="week-day">ВТ</div>
+            <div class="week-day">СР</div>
+            <div class="week-day">ЧТ</div>
+            <div class="week-day active">ПТ</div>
+            <div class="week-day">СБ</div>
+            <div class="week-day">ВС</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Сегодня</h2>
+          <div class="courses-list">
+            <div class="course-card schedule-card">
+              <div class="muted">11:05 — 11:55</div>
+              <div class="course-top">
+                <div>
+                  <strong>UX/UI дизайн</strong>
+                  <div class="muted">Имамадтинова К.Ф. (Лаб)</div>
+                </div>
+                <span class="badge success">85%</span>
+              </div>
+              <div class="muted">ККЦУ 402 · Посещаемость</div>
+              <div class="progress-bar"><span style="width: 85%"></span></div>
+            </div>
+            <div class="course-card schedule-card blue">
+              <div class="muted">12:10 — 13:00</div>
+              <div class="course-top">
+                <div>
+                  <strong>UX/UI дизайн</strong>
+                  <div class="muted">Имамадтинова К.Ф. (Лекция)</div>
+                </div>
+                <span class="badge success">92%</span>
+              </div>
+              <div class="muted">ГУК 535 · Посещаемость</div>
+              <div class="progress-bar"><span style="width: 92%"></span></div>
+            </div>
+            <div class="course-card schedule-card orange">
+              <div class="muted">13:15 — 14:05</div>
+              <div class="course-top">
+                <div>
+                  <strong>UX/UI дизайн</strong>
+                  <div class="muted">Шаханов Э.Р. (Практика)</div>
+                </div>
+                <span class="badge success">78%</span>
+              </div>
+              <div class="muted">ГУК 1014 · Посещаемость</div>
+              <div class="progress-bar"><span style="width: 78%"></span></div>
+            </div>
+            <div class="course-card schedule-card purple">
+              <div class="muted">14:20 — 15:10</div>
+              <div class="course-top">
+                <div>
+                  <strong>Capstone Project 1</strong>
+                  <div class="muted">Утегенова А.У. (Практика)</div>
+                </div>
+                <span class="badge success">95%</span>
+              </div>
+              <div class="muted">ГУК 333 · Посещаемость</div>
+              <div class="progress-bar"><span style="width: 95%"></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Последние уведомления</h2>
+          <div class="notification-card success">
+            <h4>Оценка выставлена</h4>
+            <p>UX/UI дизайн · 9 баллов</p>
+            <time>15 сентября 2025, 14:30</time>
+          </div>
+          <div class="notification-card" style="border-color: #f59e0b">
+            <h4>Напоминание</h4>
+            <p>Экзамен через 3 дня</p>
+            <time>12 мая 2025, 09:00</time>
+          </div>
+        </section>
+
+        <div class="bottom-nav-slot" data-include="components/bottom-nav.html"></div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

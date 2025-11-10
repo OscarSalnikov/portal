@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Студенческий портал — Оценки</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="grades">
+    <div class="app-shell">
+      <div class="sidebar-slot" data-include="components/sidebar.html"></div>
+      <main class="main-area">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Студенческий портал</p>
+            <h1>Оценки</h1>
+            <p>Контролируйте GPA, кредиты и промежуточные аттестации.</p>
+          </div>
+          <button class="ghost-button">Текущий семестр</button>
+        </header>
+
+        <section class="card">
+          <div class="stats-grid">
+            <article class="stat-tile">
+              <div class="label">GPA</div>
+              <div class="value">4.2</div>
+            </article>
+            <article class="stat-tile">
+              <div class="label">Кредиты</div>
+              <div class="value">156</div>
+            </article>
+            <article class="stat-tile">
+              <div class="label">Семестр</div>
+              <div class="value">Текущий</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Оценки по предметам</h2>
+          <div class="courses-list">
+            <div class="course-card">
+              <div class="course-top">
+                <div>
+                  <strong>UX/UI дизайн</strong>
+                  <div class="muted">CSE5132</div>
+                </div>
+                <div class="grade-chip">
+                  <span>A</span>
+                  Отлично
+                </div>
+              </div>
+              <div class="grade-grid">
+                <div>
+                  <div class="muted">Att.1</div>
+                  <strong>4.0</strong>
+                </div>
+                <div>
+                  <div class="muted">Att.2</div>
+                  <strong>4.0</strong>
+                </div>
+                <div>
+                  <div class="muted">Final</div>
+                  <strong>4.0</strong>
+                </div>
+              </div>
+            </div>
+            <div class="course-card">
+              <div class="course-top">
+                <div>
+                  <strong>Анализ и обработка веб данных</strong>
+                  <div class="muted">CSE6902</div>
+                </div>
+                <div class="grade-chip">
+                  <span>-</span>
+                  В ожидании
+                </div>
+              </div>
+              <div class="grade-grid">
+                <div>
+                  <div class="muted">Att.1</div>
+                  <strong>-</strong>
+                </div>
+                <div>
+                  <div class="muted">Att.2</div>
+                  <strong>-</strong>
+                </div>
+                <div>
+                  <div class="muted">Final</div>
+                  <strong>-</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Статистика</h2>
+          <div class="stats-bars">
+            <div class="bar" style="--value: 70%">
+              <span>Отличные (A)</span>
+              <div class="track"></div>
+            </div>
+            <div class="bar" style="--value: 30%">
+              <span>Хорошие (B)</span>
+              <div class="track" style="--value: 30%"></div>
+            </div>
+            <div class="bar" style="--value: 10%">
+              <span>Удовл. (C)</span>
+              <div class="track" style="--value: 10%"></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="bottom-nav-slot" data-include="components/bottom-nav.html"></div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

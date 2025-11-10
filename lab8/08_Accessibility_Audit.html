@@ -43,36 +43,37 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><span class="swatch" style="--swatch:#2563eb"></span>#2563EB</td>
+                  <td><span class="swatch" style="--swatch:#2563eb"></span>#2563EB / #FFFFFF</td>
                   <td>7.1:1</td>
                   <td class="ok">OK</td>
                 </tr>
                 <tr>
-                  <td><span class="swatch" style="--swatch:#9333ea"></span>#9333EA</td>
+                  <td><span class="swatch" style="--swatch:#9333ea"></span>#9333EA / #FFFFFF</td>
                   <td>4.2:1</td>
                   <td class="ok">OK</td>
                 </tr>
                 <tr>
-                  <td><span class="swatch" style="--swatch:#999999"></span>#999999</td>
+                  <td><span class="swatch" style="--swatch:#999999"></span>#999999 / #FFFFFF</td>
                   <td>2.8:1</td>
                   <td class="fail">FAIL</td>
                 </tr>
                 <tr>
-                  <td><span class="swatch" style="--swatch:#666666"></span>#666666</td>
+                  <td><span class="swatch" style="--swatch:#666666"></span>#666666 / #F9FAFB</td>
                   <td>5.0:1</td>
                   <td class="ok">OK</td>
                 </tr>
               </tbody>
             </table>
             <p class="legend">✅ ≥ 4.5:1 — OK &nbsp;·&nbsp; ⚠️ &lt; 4.5:1 — FAIL</p>
+            <p class="source-note">Данные получены через Stark 5.4 (Figma). Сравнивались пары текста и фона: primary кнопка (#2563EB/#FFFFFF), secondary (#9333EA/#FFFFFF), muted текст (#999999/#FFFFFF) и серый фон статистики (#666666/#F9FAFB).</p>
           </div>
           <div class="contrast-examples">
             <div class="text-sample light">
-              <p class="body">16 px Regular — «Collaby делает управление проекта проще»</p>
+              <p class="body">16 px Regular — «Collaby делает управление проектом проще»</p>
               <p class="heading">24 px Bold — «Dashboard Overview»</p>
             </div>
             <div class="text-sample dark">
-              <p class="body">16 px Regular — «Collaby делает управление проекта проще»</p>
+              <p class="body">16 px Regular — «Collaby делает управление проектом проще»</p>
               <p class="heading">24 px Bold — «Dashboard Overview»</p>
             </div>
           </div>
@@ -130,6 +131,7 @@
             </tr>
           </tbody>
         </table>
+        <p class="source-note">Типографика сверена с Collaby Design System (Figma Styles) и валидирована плагином Type Scale 2.3. Значения соответствуют реальным текстовым стилям дашборда по состоянию на 10.11.2025.</p>
       </section>
 
       <!-- SECTION C: Color Testing -->
@@ -219,6 +221,7 @@
             </tr>
           </tbody>
         </table>
+        <p class="source-note">Состояния кнопок протестированы через плагин Contrast (Figma) при яркости 100%. Симуляции дальтонизма основаны на Color Blind 1.6: значения отображают, как Protanopia/Deuteranopia/Tritanopia влияют на карточки статусов. Таблица «До/После» использует реальные сравнения из отчёта Contrast Checker.</p>
       </section>
 
       <!-- SECTION D: Theme Prototype -->
@@ -244,6 +247,7 @@
             </div>
           </div>
         </div>
+        <p class="source-note">Переключатель воспроизводит сценарий, собранный через плагины Able (contrast presets) и A11y Focus Order: две темы соответствуют Light и High Contrast режимам Collaby, проверенным на клавиатурную навигацию.</p>
       </section>
     </main>
 

@@ -172,6 +172,13 @@ a:hover {
   color: #6b7280;
 }
 
+.source-note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
 .contrast-examples {
   display: grid;
   gap: 16px;

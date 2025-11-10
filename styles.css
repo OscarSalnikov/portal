@@ -27,6 +27,36 @@ body {
   background: var(--bg-main);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme='dark'] {
+  --bg-main: #111321;
+  --bg-alt: #181b2c;
+  --card-bg: #1e2133;
+  --text-dark: #f4f5fa;
+  --text-muted: #c0c5d6;
+  --accent-peach: #ffb4a2;
+  --accent-lilac: #c9afff;
+  --accent-strong: #9f9bff;
+  --accent-highlight: rgba(159, 155, 255, 0.16);
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.45);
+  --border-soft: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body[data-theme='accessible'] {
+  --bg-main: #fffef5;
+  --bg-alt: #fff6d6;
+  --card-bg: #ffffff;
+  --text-dark: #111111;
+  --text-muted: #222222;
+  --accent-peach: #ffb703;
+  --accent-lilac: #1565c0;
+  --accent-strong: #0f62fe;
+  --accent-highlight: rgba(15, 98, 254, 0.2);
+  --shadow-soft: 0 0 0 rgba(0, 0, 0, 0);
+  --border-soft: 2px solid #0f62fe;
+  font-size: 18px;
 }
 
 .eyebrow {
@@ -364,6 +394,55 @@ textarea {
 .progress-bar.danger span {
   background-color: #ff6b6b;
   background-image: none;
+}
+
+.theme-switcher {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 16px;
+  border: var(--border-soft);
+  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.theme-switcher .label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.theme-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.theme-btn {
+  flex: 1 1 90px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 10px 12px;
+  background: var(--accent-highlight);
+  color: var(--accent-strong);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-btn.active,
+.theme-btn:hover {
+  border-color: var(--accent-strong);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-soft);
+}
+
+.floating-theme-switcher {
+  max-width: 420px;
+  margin: 0 auto 24px;
 }
 
 .primary-button {

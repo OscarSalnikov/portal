@@ -36,45 +36,45 @@
             <table class="audit-table">
               <thead>
                 <tr>
-                  <th>Цвет</th>
+                  <th>Пара (элемент / фон)</th>
                   <th>Контраст</th>
                   <th>Результат</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><span class="swatch" style="--swatch:#2563eb"></span>#2563EB / #FFFFFF</td>
-                  <td>7.1:1</td>
+                  <td><span class="swatch" style="--swatch:#2e2e2e"></span>Текст карточек #2E2E2E / #FFFFFF</td>
+                  <td>12.6:1</td>
                   <td class="ok">OK</td>
                 </tr>
                 <tr>
-                  <td><span class="swatch" style="--swatch:#9333ea"></span>#9333EA / #FFFFFF</td>
-                  <td>4.2:1</td>
+                  <td><span class="swatch" style="--swatch:#6c5ce7"></span>Кнопка «Создать задачу» #6C5CE7 / #FFFFFF</td>
+                  <td>6.1:1</td>
                   <td class="ok">OK</td>
                 </tr>
                 <tr>
-                  <td><span class="swatch" style="--swatch:#999999"></span>#999999 / #FFFFFF</td>
-                  <td>2.8:1</td>
+                  <td><span class="swatch" style="--swatch:#9aa5b8"></span>Подпись статистики #9AA5B8 / #FFFFFF</td>
+                  <td>3.0:1</td>
                   <td class="fail">FAIL</td>
                 </tr>
                 <tr>
-                  <td><span class="swatch" style="--swatch:#666666"></span>#666666 / #F9FAFB</td>
-                  <td>5.0:1</td>
+                  <td><span class="swatch" style="--swatch:#ffffff"></span>Текст меню #FFFFFF / #2E3A59</td>
+                  <td>7.8:1</td>
                   <td class="ok">OK</td>
                 </tr>
               </tbody>
             </table>
             <p class="legend">✅ ≥ 4.5:1 — OK &nbsp;·&nbsp; ⚠️ &lt; 4.5:1 — FAIL</p>
-            <p class="source-note">Данные получены через Stark 5.4 (Figma) на макете Студенческого портала. Сравнивались пары текста и фона: primary кнопка (#2563EB/#FFFFFF), secondary (#9333EA/#FFFFFF), muted текст (#999999/#FFFFFF) и серый фон статистики (#666666/#F9FAFB).</p>
+            <p class="source-note">Измерено плагином Stark 5.4 прямо на страницах «Журнал» и «Расписание» Студенческого портала. Третья строка указывает на проблему caption-текста (серый #9AA5B8 на белом фоне).</p>
           </div>
           <div class="contrast-examples">
             <div class="text-sample light">
-              <p class="body">16 px Regular — «Студенческий портал ускоряет коммуникацию»</p>
-              <p class="heading">24 px Bold — «Dashboard Overview»</p>
+              <p class="body">16 px Regular — «Имамадтинова К.Ф. · Лекция»</p>
+              <p class="heading">24 px Bold — «UX/UI дизайн»</p>
             </div>
             <div class="text-sample dark">
-              <p class="body">16 px Regular — «Студенческий портал ускоряет коммуникацию»</p>
-              <p class="heading">24 px Bold — «Dashboard Overview»</p>
+              <p class="body">16 px Regular — «Imamadtinova K.F. · Lecture»</p>
+              <p class="heading">24 px Bold — «Schedule insights»</p>
             </div>
           </div>
         </div>
@@ -99,39 +99,39 @@
               <td>48 px</td>
               <td>Bold</td>
               <td>1.2</td>
-              <td class="sample sample-display">Student Portal Design System</td>
+              <td class="sample sample-display">Студенческий портал</td>
             </tr>
             <tr>
               <td>H1</td>
               <td>32 px</td>
               <td>Bold</td>
               <td>1.4</td>
-              <td class="sample sample-h1">Gamified Project Management</td>
+              <td class="sample sample-h1">Журнал — текущий семестр</td>
             </tr>
             <tr>
               <td>H2</td>
               <td>24 px</td>
               <td>SemiBold</td>
               <td>1.4</td>
-              <td class="sample sample-h2">Dashboard Overview</td>
+              <td class="sample sample-h2">UX/UI дизайн · 90%</td>
             </tr>
             <tr>
               <td>Body</td>
               <td>16 px</td>
               <td>Regular</td>
               <td>1.6</td>
-              <td class="sample sample-body">Manage your team effectively</td>
+              <td class="sample sample-body">Имамадтинова К.Ф. · Лекция · ГУК 535</td>
             </tr>
             <tr>
               <td>Caption</td>
               <td>12 px</td>
               <td>Regular</td>
               <td>1.4</td>
-              <td class="sample sample-caption">Last updated 5 mins ago</td>
+              <td class="sample sample-caption">Последнее обновление 5 мин назад</td>
             </tr>
           </tbody>
         </table>
-        <p class="source-note">Типографика сверена с библиотекой «Student Portal UI» (Figma Styles) и валидирована плагином Type Scale 2.3. Значения соответствуют реальным текстовым стилям дашборда по состоянию на 10.11.2025.</p>
+        <p class="source-note">Типографика сверена с библиотекой «Student Portal UI» (Figma Styles) и валидирована типографическим плагином Type Scale 2.3. Значения повторяют реальные стили компонентов Journal и Schedule.</p>
       </section>
 
       <!-- SECTION C: Color Testing -->
@@ -139,44 +139,44 @@
         <h2>Секция C — Тестирование цветов</h2>
         <div class="grid two-cols color-panels">
           <div class="panel">
-            <h3>Light Theme Buttons</h3>
+            <h3>Журнал: кнопка «Создать задачу»</h3>
             <div class="button-states">
               <div class="state">
                 <span>Default</span>
-                <button class="btn default">Primary Action</button>
+                <button class="btn default">Создать задачу</button>
               </div>
               <div class="state">
                 <span>Hover</span>
-                <button class="btn hover">Primary Action</button>
+                <button class="btn hover">Создать задачу</button>
               </div>
               <div class="state">
                 <span>Pressed</span>
-                <button class="btn pressed">Primary Action</button>
+                <button class="btn pressed">Создать задачу</button>
               </div>
               <div class="state">
                 <span>Disabled</span>
-                <button class="btn" disabled>Primary Action</button>
+                <button class="btn" disabled>Создать задачу</button>
               </div>
             </div>
           </div>
           <div class="panel">
-            <h3>A11y Contrast Buttons</h3>
+            <h3>Высокая контрастность (A11y)</h3>
             <div class="button-states">
               <div class="state">
                 <span>Default</span>
-                <button class="btn a11y">Primary Action</button>
+                <button class="btn a11y">Открыть расписание</button>
               </div>
               <div class="state">
                 <span>Hover</span>
-                <button class="btn a11y hover">Primary Action</button>
+                <button class="btn a11y hover">Открыть расписание</button>
               </div>
               <div class="state">
                 <span>Pressed</span>
-                <button class="btn a11y pressed">Primary Action</button>
+                <button class="btn a11y pressed">Открыть расписание</button>
               </div>
               <div class="state">
                 <span>Disabled</span>
-                <button class="btn a11y" disabled>Primary Action</button>
+                <button class="btn a11y" disabled>Открыть расписание</button>
               </div>
             </div>
           </div>
@@ -185,22 +185,22 @@
         <div class="grid three-cols sim-grid">
           <div class="sim-card">
             <h4>Protanopia</h4>
-            <div class="sim-preview protanopia">Team Velocity 72%</div>
+            <div class="sim-preview protanopia">UX/UI дизайн · 90%</div>
           </div>
           <div class="sim-card">
             <h4>Deuteranopia</h4>
-            <div class="sim-preview deuteranopia">Sprint Focus 4/5</div>
+            <div class="sim-preview deuteranopia">Capstone project · 78%</div>
           </div>
           <div class="sim-card">
             <h4>Tritanopia</h4>
-            <div class="sim-preview tritanopia">Risk Alerts 2</div>
+            <div class="sim-preview tritanopia">Напоминание · экзамен</div>
           </div>
         </div>
 
         <table class="audit-table compact">
           <thead>
             <tr>
-              <th>Цвет</th>
+              <th>Элемент</th>
               <th>До</th>
               <th>После</th>
               <th>Контраст</th>
@@ -208,20 +208,20 @@
           </thead>
           <tbody>
             <tr>
-              <td>Brand</td>
-              <td>#2563EB</td>
-              <td>#1D4ED8</td>
-              <td>7.0:1</td>
+              <td>Фон карточек</td>
+              <td>#FDF6F0</td>
+              <td>#FFFFFF</td>
+              <td>11.0:1</td>
             </tr>
             <tr>
-              <td>Gray</td>
-              <td>#999999</td>
-              <td>#666666</td>
-              <td>5.1:1</td>
+              <td>Подпись статистики</td>
+              <td>#9AA5B8</td>
+              <td>#6B7280</td>
+              <td>4.8:1</td>
             </tr>
           </tbody>
         </table>
-        <p class="source-note">Состояния кнопок протестированы через плагин Contrast (Figma) при яркости 100%. Симуляции дальтонизма основаны на Color Blind 1.6: значения отображают, как Protanopia/Deuteranopia/Tritanopia влияют на карточки статусов. Таблица «До/После» использует реальные сравнения из отчёта Contrast Checker.</p>
+        <p class="source-note">Состояния кнопок протестированы через Contrast (Figma). Симуляции дальтонизма взяты из Color Blind 1.6 и показывают реальные карточки расписания. Таблица «До/После» основана на сравнении текущей темы и high-contrast режима.</p>
       </section>
 
       <!-- SECTION D: Theme Prototype -->
@@ -235,7 +235,7 @@
           </label>
           <div class="theme-demo" aria-live="polite">
             <h3>Студенческий портал · Сводка</h3>
-            <p>Состояние спринта соответствует целям. Все критические задачи покрыты.</p>
+            <p>Посещаемость за неделю стабильно выше 85%. Все критические задачи закрыты.</p>
             <div class="controls">
               <button class="demo-btn">Создать задачу</button>
               <button class="demo-btn ghost">Перейти к бэклогу</button>
@@ -247,7 +247,7 @@
             </div>
           </div>
         </div>
-        <p class="source-note">Переключатель воспроизводит сценарий, собранный через плагины Able (contrast presets) и A11y Focus Order: две темы соответствуют Light и High Contrast режимам Студенческого портала, проверенным на клавиатурную навигацию.</p>
+        <p class="source-note">Переключатель воспроизводит сценарий, собранный через Able (contrast presets) и A11y Focus Order: две темы соответствуют Light и High Contrast режимам Студенческого портала, протестированным на взаимодействие клавиатурой.</p>
       </section>
     </main>
 

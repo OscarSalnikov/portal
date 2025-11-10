@@ -17,15 +17,10 @@
 
 const initNavigation = () => {
   const currentPage = document.body.dataset.page;
-  const nav = document.querySelector('.bottom-nav');
-  if (!nav || !currentPage) return;
+  if (!currentPage) return;
 
-  nav.querySelectorAll('[data-nav]').forEach((link) => {
-    if (link.dataset.nav === currentPage) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
+  document.querySelectorAll('[data-nav]').forEach((link) => {
+    link.classList.toggle('active', link.dataset.nav === currentPage);
   });
 };
 

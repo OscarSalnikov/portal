@@ -107,6 +107,12 @@ textarea {
   display: flex;
   flex-direction: column;
   box-shadow: inset -1px 0 0 rgba(108, 92, 231, 0.1);
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  align-self: flex-start;
+  overflow-y: auto;
 }
 
 .sidebar .profile {
@@ -673,6 +679,9 @@ textarea {
     flex-wrap: wrap;
     gap: 12px;
     align-items: center;
+    position: static;
+    height: auto;
+    overflow: visible;
   }
 
   .sidebar .profile {

@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaby — Accessibility Audit (Lab 8)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="brand">
+        <div class="logo">C</div>
+        <div>
+          <strong>Collaby</strong>
+          <span>Accessibility Audit</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#contrast">Контрастность</a>
+        <a href="#typography">Шрифты</a>
+        <a href="#colors">Цвета</a>
+        <a href="#prototype">Прототип</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <!-- SECTION A: Color Accessibility -->
+      <section id="contrast" class="audit-section fade-in">
+        <h2>Секция A — Проверка контрастности</h2>
+        <p>Проверяем цветовые пары интерфейса Collaby согласно WCAG 2.1 AA (уровни 4.5:1 и 3:1 для крупного текста).</p>
+        <div class="grid two-cols">
+          <div>
+            <table class="audit-table">
+              <thead>
+                <tr>
+                  <th>Цвет</th>
+                  <th>Контраст</th>
+                  <th>Результат</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="swatch" style="--swatch:#2563eb"></span>#2563EB</td>
+                  <td>7.1:1</td>
+                  <td class="ok">OK</td>
+                </tr>
+                <tr>
+                  <td><span class="swatch" style="--swatch:#9333ea"></span>#9333EA</td>
+                  <td>4.2:1</td>
+                  <td class="ok">OK</td>
+                </tr>
+                <tr>
+                  <td><span class="swatch" style="--swatch:#999999"></span>#999999</td>
+                  <td>2.8:1</td>
+                  <td class="fail">FAIL</td>
+                </tr>
+                <tr>
+                  <td><span class="swatch" style="--swatch:#666666"></span>#666666</td>
+                  <td>5.0:1</td>
+                  <td class="ok">OK</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="legend">✅ ≥ 4.5:1 — OK &nbsp;·&nbsp; ⚠️ &lt; 4.5:1 — FAIL</p>
+          </div>
+          <div class="contrast-examples">
+            <div class="text-sample light">
+              <p class="body">16 px Regular — «Collaby делает управление проекта проще»</p>
+              <p class="heading">24 px Bold — «Dashboard Overview»</p>
+            </div>
+            <div class="text-sample dark">
+              <p class="body">16 px Regular — «Collaby делает управление проекта проще»</p>
+              <p class="heading">24 px Bold — «Dashboard Overview»</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION B: Typography Audit -->
+      <section id="typography" class="audit-section fade-in">
+        <h2>Секция B — Проверка шрифтов</h2>
+        <table class="audit-table typography">
+          <thead>
+            <tr>
+              <th>Название</th>
+              <th>Размер</th>
+              <th>Толщина</th>
+              <th>Межстрочный интервал</th>
+              <th>Пример</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Display</td>
+              <td>48 px</td>
+              <td>Bold</td>
+              <td>1.2</td>
+              <td class="sample sample-display">Collaby Design System</td>
+            </tr>
+            <tr>
+              <td>H1</td>
+              <td>32 px</td>
+              <td>Bold</td>
+              <td>1.4</td>
+              <td class="sample sample-h1">Gamified Project Management</td>
+            </tr>
+            <tr>
+              <td>H2</td>
+              <td>24 px</td>
+              <td>SemiBold</td>
+              <td>1.4</td>
+              <td class="sample sample-h2">Dashboard Overview</td>
+            </tr>
+            <tr>
+              <td>Body</td>
+              <td>16 px</td>
+              <td>Regular</td>
+              <td>1.6</td>
+              <td class="sample sample-body">Manage your team effectively</td>
+            </tr>
+            <tr>
+              <td>Caption</td>
+              <td>12 px</td>
+              <td>Regular</td>
+              <td>1.4</td>
+              <td class="sample sample-caption">Last updated 5 mins ago</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- SECTION C: Color Testing -->
+      <section id="colors" class="audit-section fade-in">
+        <h2>Секция C — Тестирование цветов</h2>
+        <div class="grid two-cols color-panels">
+          <div class="panel">
+            <h3>Light Theme Buttons</h3>
+            <div class="button-states">
+              <div class="state">
+                <span>Default</span>
+                <button class="btn default">Primary Action</button>
+              </div>
+              <div class="state">
+                <span>Hover</span>
+                <button class="btn hover">Primary Action</button>
+              </div>
+              <div class="state">
+                <span>Pressed</span>
+                <button class="btn pressed">Primary Action</button>
+              </div>
+              <div class="state">
+                <span>Disabled</span>
+                <button class="btn" disabled>Primary Action</button>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>A11y Contrast Buttons</h3>
+            <div class="button-states">
+              <div class="state">
+                <span>Default</span>
+                <button class="btn a11y">Primary Action</button>
+              </div>
+              <div class="state">
+                <span>Hover</span>
+                <button class="btn a11y hover">Primary Action</button>
+              </div>
+              <div class="state">
+                <span>Pressed</span>
+                <button class="btn a11y pressed">Primary Action</button>
+              </div>
+              <div class="state">
+                <span>Disabled</span>
+                <button class="btn a11y" disabled>Primary Action</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid three-cols sim-grid">
+          <div class="sim-card">
+            <h4>Protanopia</h4>
+            <div class="sim-preview protanopia">Team Velocity 72%</div>
+          </div>
+          <div class="sim-card">
+            <h4>Deuteranopia</h4>
+            <div class="sim-preview deuteranopia">Sprint Focus 4/5</div>
+          </div>
+          <div class="sim-card">
+            <h4>Tritanopia</h4>
+            <div class="sim-preview tritanopia">Risk Alerts 2</div>
+          </div>
+        </div>
+
+        <table class="audit-table compact">
+          <thead>
+            <tr>
+              <th>Цвет</th>
+              <th>До</th>
+              <th>После</th>
+              <th>Контраст</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Brand</td>
+              <td>#2563EB</td>
+              <td>#1D4ED8</td>
+              <td>7.0:1</td>
+            </tr>
+            <tr>
+              <td>Gray</td>
+              <td>#999999</td>
+              <td>#666666</td>
+              <td>5.1:1</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- SECTION D: Theme Prototype -->
+      <section id="prototype" class="audit-section fade-in">
+        <h2>Секция D — Прототип переключения тем</h2>
+        <div class="theme-lab">
+          <label class="toggle">
+            <input type="checkbox" id="themeToggle" />
+            <span class="slider"></span>
+            <span class="labels" data-light="Light" data-contrast="High Contrast"></span>
+          </label>
+          <div class="theme-demo" aria-live="polite">
+            <h3>Collaby Status Update</h3>
+            <p>Состояние спринта соответствует целям. Все критические задачи покрыты.</p>
+            <div class="controls">
+              <button class="demo-btn">Создать задачу</button>
+              <button class="demo-btn ghost">Перейти к бэклогу</button>
+              <button class="demo-btn" disabled>Готово</button>
+            </div>
+            <div class="inline-icon">
+              <i data-feather="alert-triangle"></i>
+              <span>Focus order пересмотрен с учётом клавиатурной навигации.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>Accessibility Audit — Collaby, 2025</p>
+      <div class="footer-links">
+        <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noreferrer">WCAG 2.1 AA</a>
+        <a href="https://www.figma.com/community/plugin/748533339900865323/Contrast" target="_blank">Contrast</a>
+        <a href="https://www.figma.com/community/plugin/732603254453395948/Stark" target="_blank">Stark</a>
+        <a href="https://www.figma.com/community/plugin/887264621207516673/Able" target="_blank">Able</a>
+        <a href="https://www.figma.com/community/plugin/991148341568008720/A11y---Focus-Order" target="_blank">A11y Focus Order</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        feather.replace();
+        const toggle = document.getElementById('themeToggle');
+        const demo = document.querySelector('.theme-demo');
+        toggle.addEventListener('change', () => {
+          demo.classList.toggle('contrast', toggle.checked);
+        });
+      });
+    </script>
+  </body>
+</html>

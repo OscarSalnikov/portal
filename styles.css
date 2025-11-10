@@ -516,11 +516,12 @@ textarea {
 .notification-card {
   border-radius: 16px;
   padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0);
-  background: rgba(255, 255, 255, 0.85);
+  border: var(--border-soft);
+  background: var(--card-bg);
   box-shadow: var(--shadow-soft);
   border-left: 4px solid var(--accent-lilac);
   margin-top: 20px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .notification-stack {
@@ -559,7 +560,7 @@ textarea {
   border: var(--border-soft);
   font-weight: 600;
   color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--card-bg);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -568,7 +569,7 @@ textarea {
 .week-day:hover {
   background: var(--accent-highlight);
   color: var(--accent-strong);
-  border-color: rgba(255, 209, 255, 0.9);
+  border-color: var(--accent-strong);
 }
 
 .schedule-card {

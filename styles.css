@@ -110,9 +110,8 @@ textarea {
   position: sticky;
   top: 0;
   bottom: 0;
-  height: 100vh;
+  min-height: 100vh;
   align-self: flex-start;
-  overflow-y: auto;
 }
 
 .sidebar .profile {
@@ -190,7 +189,7 @@ textarea {
 
 .main-area {
   flex: 1;
-  padding: 40px 56px 120px;
+  padding: 40px 56px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -680,8 +679,7 @@ textarea {
     gap: 12px;
     align-items: center;
     position: static;
-    height: auto;
-    overflow: visible;
+    min-height: auto;
   }
 
   .sidebar .profile {

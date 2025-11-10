@@ -435,6 +435,13 @@ textarea {
   border-left: 4px solid var(--accent-lilac);
 }
 
+.notification-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 20px;
+}
+
 .notification-card.success {
   border-left-color: var(--accent-peach);
 }

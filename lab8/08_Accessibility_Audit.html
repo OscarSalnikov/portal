@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Collaby — Accessibility Audit (Lab 8)</title>
+    <title>Студенческий портал — Accessibility Audit (Lab 8)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,7 +14,7 @@
       <div class="brand">
         <div class="logo">C</div>
         <div>
-          <strong>Collaby</strong>
+          <strong>Студенческий портал</strong>
           <span>Accessibility Audit</span>
         </div>
       </div>
@@ -30,7 +30,7 @@
       <!-- SECTION A: Color Accessibility -->
       <section id="contrast" class="audit-section fade-in">
         <h2>Секция A — Проверка контрастности</h2>
-        <p>Проверяем цветовые пары интерфейса Collaby согласно WCAG 2.1 AA (уровни 4.5:1 и 3:1 для крупного текста).</p>
+        <p>Проверяем цветовые пары интерфейса Студенческого портала согласно WCAG 2.1 AA (уровни 4.5:1 и 3:1 для крупного текста).</p>
         <div class="grid two-cols">
           <div>
             <table class="audit-table">
@@ -65,15 +65,15 @@
               </tbody>
             </table>
             <p class="legend">✅ ≥ 4.5:1 — OK &nbsp;·&nbsp; ⚠️ &lt; 4.5:1 — FAIL</p>
-            <p class="source-note">Данные получены через Stark 5.4 (Figma). Сравнивались пары текста и фона: primary кнопка (#2563EB/#FFFFFF), secondary (#9333EA/#FFFFFF), muted текст (#999999/#FFFFFF) и серый фон статистики (#666666/#F9FAFB).</p>
+            <p class="source-note">Данные получены через Stark 5.4 (Figma) на макете Студенческого портала. Сравнивались пары текста и фона: primary кнопка (#2563EB/#FFFFFF), secondary (#9333EA/#FFFFFF), muted текст (#999999/#FFFFFF) и серый фон статистики (#666666/#F9FAFB).</p>
           </div>
           <div class="contrast-examples">
             <div class="text-sample light">
-              <p class="body">16 px Regular — «Collaby делает управление проектом проще»</p>
+              <p class="body">16 px Regular — «Студенческий портал ускоряет коммуникацию»</p>
               <p class="heading">24 px Bold — «Dashboard Overview»</p>
             </div>
             <div class="text-sample dark">
-              <p class="body">16 px Regular — «Collaby делает управление проектом проще»</p>
+              <p class="body">16 px Regular — «Студенческий портал ускоряет коммуникацию»</p>
               <p class="heading">24 px Bold — «Dashboard Overview»</p>
             </div>
           </div>
@@ -99,7 +99,7 @@
               <td>48 px</td>
               <td>Bold</td>
               <td>1.2</td>
-              <td class="sample sample-display">Collaby Design System</td>
+              <td class="sample sample-display">Student Portal Design System</td>
             </tr>
             <tr>
               <td>H1</td>
@@ -131,7 +131,7 @@
             </tr>
           </tbody>
         </table>
-        <p class="source-note">Типографика сверена с Collaby Design System (Figma Styles) и валидирована плагином Type Scale 2.3. Значения соответствуют реальным текстовым стилям дашборда по состоянию на 10.11.2025.</p>
+        <p class="source-note">Типографика сверена с библиотекой «Student Portal UI» (Figma Styles) и валидирована плагином Type Scale 2.3. Значения соответствуют реальным текстовым стилям дашборда по состоянию на 10.11.2025.</p>
       </section>
 
       <!-- SECTION C: Color Testing -->
@@ -234,7 +234,7 @@
             <span class="labels" data-light="Light" data-contrast="High Contrast"></span>
           </label>
           <div class="theme-demo" aria-live="polite">
-            <h3>Collaby Status Update</h3>
+            <h3>Студенческий портал · Сводка</h3>
             <p>Состояние спринта соответствует целям. Все критические задачи покрыты.</p>
             <div class="controls">
               <button class="demo-btn">Создать задачу</button>
@@ -247,12 +247,12 @@
             </div>
           </div>
         </div>
-        <p class="source-note">Переключатель воспроизводит сценарий, собранный через плагины Able (contrast presets) и A11y Focus Order: две темы соответствуют Light и High Contrast режимам Collaby, проверенным на клавиатурную навигацию.</p>
+        <p class="source-note">Переключатель воспроизводит сценарий, собранный через плагины Able (contrast presets) и A11y Focus Order: две темы соответствуют Light и High Contrast режимам Студенческого портала, проверенным на клавиатурную навигацию.</p>
       </section>
     </main>
 
     <footer class="page-footer">
-      <p>Accessibility Audit — Collaby, 2025</p>
+      <p>Accessibility Audit — Студенческий портал, 2025</p>
       <div class="footer-links">
         <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noreferrer">WCAG 2.1 AA</a>
         <a href="https://www.figma.com/community/plugin/748533339900865323/Contrast" target="_blank">Contrast</a>

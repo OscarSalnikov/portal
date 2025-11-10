@@ -515,6 +515,7 @@ textarea {
   background: rgba(255, 255, 255, 0.85);
   box-shadow: var(--shadow-soft);
   border-left: 4px solid var(--accent-lilac);
+  margin-top: 20px;
 }
 
 .notification-stack {

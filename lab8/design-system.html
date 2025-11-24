@@ -1,0 +1,1003 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Design System - Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg-main: #fdf6f0;
+        --bg-alt: #f6eaf4;
+        --card-bg: #ffffff;
+        --text-dark: #2e2e2e;
+        --text-muted: #776f7a;
+        --accent-peach: #e6b0aa;
+        --accent-lilac: #a29bfe;
+        --accent-strong: #6c5ce7;
+        --accent-highlight: #ffe5d9;
+        --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.05);
+        --shadow-strong: 0 0 12px rgba(108, 92, 231, 0.35);
+        --border-soft: 1px solid rgba(108, 92, 231, 0.15);
+        --radius-8: 8px;
+        --radius-12: 12px;
+        --radius-14: 14px;
+        --radius-16: 16px;
+        --radius-20: 20px;
+        --radius-24: 24px;
+        --dark-bg: #111321;
+        --dark-card: #1e2133;
+        --dark-text: #f4f5fa;
+        --a11y-accent: #0f62fe;
+        --a11y-alt: #1565c0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 32px;
+        background: radial-gradient(circle at 20% 20%, rgba(162, 155, 254, 0.08), transparent 40%), radial-gradient(circle at 80% 0%, rgba(230, 176, 170, 0.1), transparent 40%), var(--bg-main);
+        font-family: 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: var(--text-dark);
+      }
+
+      .board {
+        max-width: 1240px;
+        margin: 0 auto 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .page-title {
+        background: var(--card-bg);
+        border: var(--border-soft);
+        border-radius: var(--radius-24);
+        padding: 28px 32px;
+        box-shadow: var(--shadow-soft);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .page-title h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .page-title p {
+        margin: 6px 0 0;
+        color: var(--text-muted);
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: var(--accent-highlight);
+        color: var(--accent-strong);
+        font-weight: 600;
+        border: var(--border-soft);
+      }
+
+      .section-card {
+        background: var(--card-bg);
+        border: var(--border-soft);
+        border-radius: var(--radius-20);
+        padding: 24px;
+        box-shadow: var(--shadow-soft);
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+
+      .section-header h2 {
+        margin: 0;
+        font-size: 22px;
+        letter-spacing: -0.01em;
+      }
+
+      .section-header span {
+        color: var(--text-muted);
+        font-size: 14px;
+      }
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .grid.three {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .grid.four {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .swatch-card {
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: var(--radius-16);
+        padding: 14px;
+        background: linear-gradient(135deg, rgba(108, 92, 231, 0.04), transparent);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .swatch {
+        width: 56px;
+        height: 56px;
+        border-radius: var(--radius-14);
+        background: var(--color, #ccc);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      }
+
+      .swatch-meta strong {
+        display: block;
+        font-size: 15px;
+      }
+
+      .swatch-meta span {
+        color: var(--text-muted);
+        font-size: 13px;
+      }
+
+      .type-block {
+        border-radius: var(--radius-16);
+        border: 1px dashed rgba(108, 92, 231, 0.2);
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .type-row {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 14px;
+        align-items: baseline;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      }
+
+      .type-row:last-child {
+        border-bottom: none;
+      }
+
+      .type-label {
+        font-size: 14px;
+        color: var(--text-muted);
+      }
+
+      .type-preview {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .type-preview small {
+        color: var(--text-muted);
+      }
+
+      .grid-map {
+        border-radius: var(--radius-16);
+        border: var(--border-soft);
+        background: linear-gradient(90deg, rgba(108, 92, 231, 0.08) 0 8%, transparent 8% 100%);
+        min-height: 160px;
+        padding: 18px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .grid-map::before {
+        content: '12 columns, 16px gap, max-width 1200px';
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      .grid-map .col {
+        background: var(--card-bg);
+        border: 1px dashed rgba(108, 92, 231, 0.35);
+        border-radius: var(--radius-12);
+        padding: 12px;
+        text-align: center;
+        font-weight: 600;
+        color: var(--accent-strong);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .grid-map .layout {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 8px;
+        margin-top: 34px;
+      }
+
+      .scale-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .scale-token {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border-radius: var(--radius-12);
+        border: var(--border-soft);
+        background: rgba(108, 92, 231, 0.05);
+        font-weight: 600;
+        color: var(--accent-strong);
+      }
+
+      .scale-token .bar {
+        height: 8px;
+        border-radius: 999px;
+        background: var(--accent-strong);
+        width: var(--w, 12px);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .radius-showcase,
+      .shadow-showcase {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .radius-box,
+      .shadow-box {
+        width: 160px;
+        padding: 16px;
+        border: var(--border-soft);
+        background: var(--card-bg);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .radius-box .demo {
+        height: 56px;
+        background: linear-gradient(135deg, rgba(162, 155, 254, 0.2), rgba(230, 176, 170, 0.2));
+        border-radius: var(--r, 12px);
+      }
+
+      .shadow-box .demo {
+        height: 56px;
+        border-radius: var(--radius-14);
+        background: var(--card-bg);
+        box-shadow: var(--shadow, var(--shadow-soft));
+      }
+
+      .component-panel {
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: var(--radius-16);
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .component-panel h3 {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .btn-row,
+      .input-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .btn {
+        border: none;
+        border-radius: var(--radius-14);
+        padding: 12px 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .btn.primary {
+        background: var(--accent-strong);
+        color: #ffffff;
+        box-shadow: var(--shadow-strong);
+      }
+
+      .btn.secondary {
+        background: var(--accent-highlight);
+        color: var(--accent-strong);
+        border: 1px solid rgba(108, 92, 231, 0.15);
+      }
+
+      .btn.ghost {
+        background: transparent;
+        color: var(--accent-strong);
+        border: 1px solid rgba(108, 92, 231, 0.3);
+      }
+
+      .btn.hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(108, 92, 231, 0.25);
+      }
+
+      .btn.active {
+        transform: translateY(1px);
+        box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+        box-shadow: none;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1 1 220px;
+      }
+
+      .field label {
+        font-weight: 600;
+        color: var(--text-dark);
+        font-size: 14px;
+      }
+
+      .field input,
+      .field select {
+        border-radius: var(--radius-14);
+        border: 1px solid rgba(162, 155, 254, 0.4);
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.92);
+        font-size: 15px;
+      }
+
+      .icons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+      }
+
+      .icon-tile {
+        border: var(--border-soft);
+        border-radius: var(--radius-12);
+        padding: 10px;
+        text-align: center;
+        background: rgba(108, 92, 231, 0.05);
+        color: var(--accent-strong);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .icon-tile i {
+        width: 22px;
+        height: 22px;
+      }
+
+      .card-sample {
+        border-radius: var(--radius-16);
+        border: var(--border-soft);
+        padding: 18px;
+        box-shadow: var(--shadow-soft);
+        background: var(--card-bg);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .progress {
+        width: 100%;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(162, 155, 254, 0.2);
+        overflow: hidden;
+      }
+
+      .progress span {
+        display: block;
+        height: 100%;
+        width: var(--value, 80%);
+        background: var(--accent-strong);
+      }
+      .nav-bar {
+        border-radius: var(--radius-16);
+        padding: 14px;
+        border: var(--border-soft);
+        display: flex;
+        gap: 10px;
+        background: var(--bg-alt);
+      }
+
+      .nav-chip {
+        padding: 10px 14px;
+        border-radius: var(--radius-12);
+        background: var(--card-bg);
+        border: 1px solid rgba(108, 92, 231, 0.2);
+        color: var(--accent-strong);
+        font-weight: 600;
+      }
+
+      .nav-chip.active {
+        background: var(--accent-highlight);
+        border-color: var(--accent-strong);
+      }
+
+      .state-card {
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: var(--radius-14);
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .state-tag {
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(108, 92, 231, 0.12);
+        color: var(--accent-strong);
+        font-weight: 700;
+        font-size: 12px;
+        width: fit-content;
+      }
+
+      .alert {
+        border-left: 4px solid #ff6b6b;
+        padding: 10px 12px;
+        border-radius: var(--radius-12);
+        background: #fff3f3;
+      }
+
+      .empty {
+        border: 1px dashed rgba(108, 92, 231, 0.3);
+        padding: 16px;
+        border-radius: var(--radius-12);
+        text-align: center;
+        color: var(--text-muted);
+        background: rgba(255, 255, 255, 0.85);
+      }
+
+      .breakpoints {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+      }
+
+      .bp {
+        border: var(--border-soft);
+        border-radius: var(--radius-14);
+        padding: 12px;
+        background: var(--card-bg);
+        display: grid;
+        grid-template-rows: 1fr auto;
+        gap: 10px;
+      }
+
+      .bp .frame {
+        border-radius: var(--radius-12);
+        background: linear-gradient(90deg, rgba(108, 92, 231, 0.1), rgba(230, 176, 170, 0.15));
+        height: 120px;
+        position: relative;
+      }
+
+      .bp.mobile .frame::after {
+        content: '';
+        position: absolute;
+        inset: 16px;
+        border-radius: 12px;
+        border: 2px dashed rgba(0, 0, 0, 0.08);
+      }
+
+      .bp.tablet .frame::after {
+        content: '';
+        position: absolute;
+        inset: 12px;
+        border-radius: 12px;
+        border: 2px dashed rgba(0, 0, 0, 0.08);
+        box-shadow: inset 120px 0 0 rgba(255, 255, 255, 0.35);
+      }
+
+      .bp.desktop .frame::after {
+        content: '';
+        position: absolute;
+        inset: 10px;
+        border-radius: 12px;
+        border: 2px dashed rgba(0, 0, 0, 0.08);
+        box-shadow: inset 260px 0 0 rgba(255, 255, 255, 0.35);
+      }
+
+      .usage-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .usage-item {
+        padding: 12px;
+        border-radius: var(--radius-12);
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 12px;
+        color: var(--text-muted);
+        margin: 0 0 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board">
+      <header class="page-title">
+        <div>
+          <p class="eyebrow">Mini Design System</p>
+          <h1>Student Portal - UI Kit</h1>
+          <p>Palette, typography, grid, spacing, and reusable patterns prepared for HTML to Figma import.</p>
+        </div>
+        <div class="pill">
+          <i data-feather="cpu"></i>
+          Version 1.0
+        </div>
+      </header>
+
+      <section class="section-card" id="foundations">
+        <div class="section-header">
+          <h2>Foundations</h2>
+          <span>Color, type, grid, spacing, radius, shadows</span>
+        </div>
+        <div class="grid two">
+          <div class="component-panel">
+            <h3>Color palette</h3>
+            <div class="grid two">
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#6c5ce7"></div>
+                <div class="swatch-meta">
+                  <strong>Accent Strong</strong>
+                  <span>#6C5CE7</span>
+                </div>
+              </div>
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#a29bfe"></div>
+                <div class="swatch-meta">
+                  <strong>Accent Lilac</strong>
+                  <span>#A29BFE</span>
+                </div>
+              </div>
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#e6b0aa"></div>
+                <div class="swatch-meta">
+                  <strong>Accent Peach</strong>
+                  <span>#E6B0AA</span>
+                </div>
+              </div>
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#ffe5d9"></div>
+                <div class="swatch-meta">
+                  <strong>Highlight</strong>
+                  <span>#FFE5D9</span>
+                </div>
+              </div>
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#fdf6f0"></div>
+                <div class="swatch-meta">
+                  <strong>Background</strong>
+                  <span>#FDF6F0</span>
+                </div>
+              </div>
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#f6eaf4"></div>
+                <div class="swatch-meta">
+                  <strong>Background Alt</strong>
+                  <span>#F6EAF4</span>
+                </div>
+              </div>
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#2e2e2e"></div>
+                <div class="swatch-meta">
+                  <strong>Text Dark</strong>
+                  <span>#2E2E2E</span>
+                </div>
+              </div>
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#776f7a"></div>
+                <div class="swatch-meta">
+                  <strong>Text Muted</strong>
+                  <span>#776F7A</span>
+                </div>
+              </div>
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#111321"></div>
+                <div class="swatch-meta">
+                  <strong>Dark BG</strong>
+                  <span>#111321</span>
+                </div>
+              </div>
+              <div class="swatch-card">
+                <div class="swatch" style="--color:#0f62fe"></div>
+                <div class="swatch-meta">
+                  <strong>A11y Accent</strong>
+                  <span>#0F62FE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-panel">
+            <h3>Typography</h3>
+            <p class="eyebrow">Font: Manrope, 16px base (18px in A11y)</p>
+            <div class="type-block">
+              <div class="type-row">
+                <div class="type-label">Display 48 / 700</div>
+                <div class="type-preview">
+                  <span style="font-size:48px;font-weight:700;line-height:1.2;">Hero headline</span>
+                  <small>For hero numbers and key stats</small>
+                </div>
+              </div>
+              <div class="type-row">
+                <div class="type-label">H1 32 / 700</div>
+                <div class="type-preview">
+                  <span style="font-size:32px;font-weight:700;line-height:1.3;">Primary page title</span>
+                  <small>Pages and card headers</small>
+                </div>
+              </div>
+              <div class="type-row">
+                <div class="type-label">H2 24 / 600</div>
+                <div class="type-preview">
+                  <span style="font-size:24px;font-weight:600;line-height:1.35;">Section subtitle</span>
+                  <small>Inside cards and modules</small>
+                </div>
+              </div>
+              <div class="type-row">
+                <div class="type-label">H3 20 / 600</div>
+                <div class="type-preview">
+                  <span style="font-size:20px;font-weight:600;line-height:1.4;">Card heading</span>
+                  <small>Component titles</small>
+                </div>
+              </div>
+              <div class="type-row">
+                <div class="type-label">Body 16 / 400</div>
+                <div class="type-preview">
+                  <span style="font-size:16px;font-weight:400;line-height:1.6;">Body copy and helper text</span>
+                  <small>Descriptions and labels</small>
+                </div>
+              </div>
+              <div class="type-row">
+                <div class="type-label">Caption 12 / 400</div>
+                <div class="type-preview">
+                  <span style="font-size:12px;font-weight:400;line-height:1.4;color:var(--text-muted);">Meta & status</span>
+                  <small>Hints and secondary text</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="component-panel">
+            <h3>Grid / Layout</h3>
+            <div class="grid-map">
+              <div class="layout">
+                <div class="col">1</div>
+                <div class="col">2</div>
+                <div class="col">3</div>
+                <div class="col">4</div>
+                <div class="col">5</div>
+                <div class="col">6</div>
+                <div class="col">7</div>
+                <div class="col">8</div>
+                <div class="col">9</div>
+                <div class="col">10</div>
+                <div class="col">11</div>
+                <div class="col">12</div>
+              </div>
+            </div>
+            <p class="eyebrow">Container padding: 24-56px desktop, 16px mobile</p>
+          </div>
+          <div class="component-panel">
+            <h3>Spacing scale</h3>
+            <div class="scale-line">
+              <div class="scale-token" style="--w:8px">4</div>
+              <div class="scale-token" style="--w:12px">8</div>
+              <div class="scale-token" style="--w:18px">12</div>
+              <div class="scale-token" style="--w:22px">16</div>
+              <div class="scale-token" style="--w:28px">20</div>
+              <div class="scale-token" style="--w:32px">24</div>
+              <div class="scale-token" style="--w:38px">28</div>
+              <div class="scale-token" style="--w:46px">32</div>
+              <div class="scale-token" style="--w:60px">40</div>
+              <div class="scale-token" style="--w:78px">56</div>
+            </div>
+            <p class="eyebrow">Used for section, card, and button padding</p>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="component-panel">
+            <h3>Radius scale</h3>
+            <div class="radius-showcase">
+              <div class="radius-box">
+                <div class="demo" style="--r:8px;"></div>
+                <span>8px - badges</span>
+              </div>
+              <div class="radius-box">
+                <div class="demo" style="--r:12px;"></div>
+                <span>12px - tabs, inputs</span>
+              </div>
+              <div class="radius-box">
+                <div class="demo" style="--r:14px;"></div>
+                <span>14px - buttons</span>
+              </div>
+              <div class="radius-box">
+                <div class="demo" style="--r:16px;"></div>
+                <span>16px - cards</span>
+              </div>
+              <div class="radius-box">
+                <div class="demo" style="--r:20px;"></div>
+                <span>20px - navigation</span>
+              </div>
+              <div class="radius-box">
+                <div class="demo" style="--r:24px;"></div>
+                <span>24px - page shells</span>
+              </div>
+            </div>
+          </div>
+          <div class="component-panel">
+            <h3>Shadow scale</h3>
+            <div class="shadow-showcase">
+              <div class="shadow-box">
+                <div class="demo" style="--shadow:0 2px 6px rgba(0,0,0,0.04);"></div>
+                <span>XS - chips</span>
+              </div>
+              <div class="shadow-box">
+                <div class="demo" style="--shadow:var(--shadow-soft);"></div>
+                <span>Base - cards</span>
+              </div>
+              <div class="shadow-box">
+                <div class="demo" style="--shadow:var(--shadow-strong);"></div>
+                <span>Focus - primary CTA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-card" id="components">
+        <div class="section-header">
+          <h2>UI Components</h2>
+          <span>Buttons, form fields, icons, cards, navigation</span>
+        </div>
+        <div class="grid two">
+          <div class="component-panel">
+            <h3>Buttons</h3>
+            <div class="btn-row">
+              <button class="btn primary">Primary</button>
+              <button class="btn primary hover">Hover</button>
+              <button class="btn primary active">Pressed</button>
+              <button class="btn primary" disabled>Disabled</button>
+            </div>
+            <div class="btn-row">
+              <button class="btn secondary">Secondary</button>
+              <button class="btn secondary hover">Hover</button>
+              <button class="btn secondary active">Pressed</button>
+              <button class="btn secondary" disabled>Disabled</button>
+            </div>
+            <div class="btn-row">
+              <button class="btn ghost">Ghost</button>
+              <button class="btn ghost hover">Hover</button>
+              <button class="btn ghost active">Pressed</button>
+              <button class="btn ghost" disabled>Disabled</button>
+            </div>
+          </div>
+          <div class="component-panel">
+            <h3>Input / Form fields</h3>
+            <div class="input-row">
+              <div class="field">
+                <label>Email</label>
+                <input type="email" placeholder="name@domain.com" />
+              </div>
+              <div class="field">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••" />
+              </div>
+              <div class="field">
+                <label>Course</label>
+                <select>
+                  <option>UX/UI Design</option>
+                  <option>Capstone Project</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="component-panel">
+            <h3>Icons (Feather)</h3>
+            <div class="icons-grid">
+              <div class="icon-tile">
+                <i data-feather="home"></i>
+                <span>home</span>
+              </div>
+              <div class="icon-tile">
+                <i data-feather="calendar"></i>
+                <span>calendar</span>
+              </div>
+              <div class="icon-tile">
+                <i data-feather="book-open"></i>
+                <span>book-open</span>
+              </div>
+              <div class="icon-tile">
+                <i data-feather="bell"></i>
+                <span>bell</span>
+              </div>
+              <div class="icon-tile">
+                <i data-feather="bar-chart-2"></i>
+                <span>bar-chart-2</span>
+              </div>
+              <div class="icon-tile">
+                <i data-feather="activity"></i>
+                <span>activity</span>
+              </div>
+              <div class="icon-tile">
+                <i data-feather="user"></i>
+                <span>user</span>
+              </div>
+              <div class="icon-tile">
+                <i data-feather="settings"></i>
+                <span>settings</span>
+              </div>
+            </div>
+          </div>
+          <div class="component-panel">
+            <h3>Cards</h3>
+            <div class="card-sample">
+              <div class="eyebrow">Course card</div>
+              <strong>UX/UI Design</strong>
+              <span class="pill" style="background:rgba(230,176,170,0.16);color:var(--accent-peach);border:none;">Progress 85%</span>
+              <p style="margin:0;color:var(--text-muted);">Lecturer: K. F. Imamadtionova, room 402</p>
+              <div class="progress"><span style="--value:85%;"></span></div>
+            </div>
+            <div class="card-sample" style="border-left:4px solid var(--accent-lilac);">
+              <div class="eyebrow">Notification</div>
+              <strong>Capstone retake</strong>
+              <p style="margin:0;color:var(--text-muted);">28 May 2025, 16:20</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="component-panel">
+          <h3>Navigation</h3>
+          <div class="nav-bar">
+            <div class="nav-chip active">Dashboard</div>
+            <div class="nav-chip">Journal</div>
+            <div class="nav-chip">Schedule</div>
+            <div class="nav-chip">Notifications</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-card" id="states">
+        <div class="section-header">
+          <h2>States & Patterns</h2>
+          <span>Hover, active, disabled, error, empty, responsive</span>
+        </div>
+        <div class="grid three">
+          <div class="state-card">
+            <span class="state-tag">Hover</span>
+            <button class="btn primary hover">Hover</button>
+            <p style="margin:0;color:var(--text-muted);">Use on CTAs and navigation.</p>
+          </div>
+          <div class="state-card">
+            <span class="state-tag">Active</span>
+            <button class="btn secondary active">Pressed</button>
+            <p style="margin:0;color:var(--text-muted);">Slight downward shift and inset shadow.</p>
+          </div>
+          <div class="state-card">
+            <span class="state-tag">Disabled</span>
+            <button class="btn ghost" disabled>Disabled</button>
+            <p style="margin:0;color:var(--text-muted);">Lower opacity, remove shadow.</p>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="state-card">
+            <span class="state-tag">Error</span>
+            <div class="alert">
+              <strong>Submission failed</strong>
+              <p style="margin:4px 0 0;color:#b91c1c;">Check connection and retry.</p>
+            </div>
+          </div>
+          <div class="state-card">
+            <span class="state-tag">Empty</span>
+            <div class="empty">
+              <i data-feather="inbox"></i>
+              <p style="margin:6px 0 0;">No notifications yet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="component-panel">
+          <h3>Responsive patterns</h3>
+          <div class="breakpoints">
+            <div class="bp mobile">
+              <div class="frame"></div>
+              <div>
+                <strong>Mobile</strong>
+                <p style="margin:4px 0 0;color:var(--text-muted);">Stacked layout, 1 column, 16px padding.</p>
+              </div>
+            </div>
+            <div class="bp tablet">
+              <div class="frame"></div>
+              <div>
+                <strong>Tablet</strong>
+                <p style="margin:4px 0 0;color:var(--text-muted);">2-3 columns auto-fit, 20px padding.</p>
+              </div>
+            </div>
+            <div class="bp desktop">
+              <div class="frame"></div>
+              <div>
+                <strong>Desktop</strong>
+                <p style="margin:4px 0 0;color:var(--text-muted);">12 columns, dense cards and grids.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card" id="guidelines">
+        <div class="section-header">
+          <h2>Usage Guidelines</h2>
+          <span>Practical rules for consistent UI</span>
+        </div>
+        <div class="usage-list">
+          <div class="usage-item"><strong>Color:</strong> Use #6C5CE7 for primary CTAs, #A29BFE for secondary actions, #E6B0AA for warm highlights, #0F62FE for A11y/high-contrast accents.</div>
+          <div class="usage-item"><strong>Buttons:</strong> Primary for the main action on a screen; Secondary for supportive tasks; Ghost for neutral links inside cards.</div>
+          <div class="usage-item"><strong>Type:</strong> Base 16px (18px in A11y), H1 32px for page titles, Caption 12px for meta and statuses.</div>
+          <div class="usage-item"><strong>Spacing:</strong> Use 8/12/16/24/32px inside cards, 40-56px between sections; keep vertical rhythm consistent.</div>
+          <div class="usage-item"><strong>Grid:</strong> 12-column with 16px gap on desktop, auto-fit minmax(220-280px) for cards, container padding 24-56px.</div>
+          <div class="usage-item"><strong>Radius & shadows:</strong> 14px for buttons/fields, 16px for cards; soft shadow var(--shadow-soft) by default; remove shadows in high contrast.</div>
+          <div class="usage-item"><strong>States:</strong> Hover lifts with stronger shadow; Active adds light press; Disabled lowers opacity without animation.</div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.feather) {
+          window.feather.replace();
+        }
+      });
+    </script>
+  </body>
+</html>

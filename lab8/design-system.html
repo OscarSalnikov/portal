@@ -1,10 +1,10 @@
 ﻿
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Design System - Student Portal</title>
+    <title>Мини дизайн-система — Портал студента</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -119,6 +119,7 @@
         color: var(--text-muted);
         font-size: 14px;
       }
+
       .grid {
         display: grid;
         gap: 16px;
@@ -135,7 +136,6 @@
       .grid.four {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       }
-
       .swatch-card {
         border: 1px solid rgba(0, 0, 0, 0.06);
         border-radius: var(--radius-16);
@@ -211,7 +211,7 @@
       }
 
       .grid-map::before {
-        content: '12 columns, 16px gap, max-width 1200px';
+        content: '12 колонок, gap 16px, max-width 1200px';
         position: absolute;
         top: 12px;
         left: 16px;
@@ -431,6 +431,7 @@
         width: var(--value, 80%);
         background: var(--accent-strong);
       }
+
       .nav-bar {
         border-radius: var(--radius-16);
         padding: 14px;
@@ -563,141 +564,141 @@
     <div class="board">
       <header class="page-title">
         <div>
-          <p class="eyebrow">Mini Design System</p>
-          <h1>Student Portal - UI Kit</h1>
-          <p>Palette, typography, grid, spacing, and reusable patterns prepared for HTML to Figma import.</p>
+          <p class="eyebrow">Мини дизайн-система</p>
+          <h1>Портал студента — UI Kit</h1>
+          <p>Цвета, типографика, сетка, отступы и паттерны, готовые к импорту HTML → Figma.</p>
         </div>
         <div class="pill">
           <i data-feather="cpu"></i>
-          Version 1.0
+          Версия 1.0
         </div>
       </header>
 
       <section class="section-card" id="foundations">
         <div class="section-header">
-          <h2>Foundations</h2>
-          <span>Color, type, grid, spacing, radius, shadows</span>
+          <h2>Базовые токены</h2>
+          <span>Цвет, типографика, сетка, отступы, радиусы, тени</span>
         </div>
         <div class="grid two">
           <div class="component-panel">
-            <h3>Color palette</h3>
+            <h3>Цветовая палитра</h3>
             <div class="grid two">
               <div class="swatch-card">
                 <div class="swatch" style="--color:#6c5ce7"></div>
                 <div class="swatch-meta">
-                  <strong>Accent Strong</strong>
+                  <strong>Акцент Strong</strong>
                   <span>#6C5CE7</span>
                 </div>
               </div>
               <div class="swatch-card">
                 <div class="swatch" style="--color:#a29bfe"></div>
                 <div class="swatch-meta">
-                  <strong>Accent Lilac</strong>
+                  <strong>Акцент Lilac</strong>
                   <span>#A29BFE</span>
                 </div>
               </div>
               <div class="swatch-card">
                 <div class="swatch" style="--color:#e6b0aa"></div>
                 <div class="swatch-meta">
-                  <strong>Accent Peach</strong>
+                  <strong>Акцент Peach</strong>
                   <span>#E6B0AA</span>
                 </div>
               </div>
               <div class="swatch-card">
                 <div class="swatch" style="--color:#ffe5d9"></div>
                 <div class="swatch-meta">
-                  <strong>Highlight</strong>
+                  <strong>Подсветка</strong>
                   <span>#FFE5D9</span>
                 </div>
               </div>
               <div class="swatch-card">
                 <div class="swatch" style="--color:#fdf6f0"></div>
                 <div class="swatch-meta">
-                  <strong>Background</strong>
+                  <strong>Фон</strong>
                   <span>#FDF6F0</span>
                 </div>
               </div>
               <div class="swatch-card">
                 <div class="swatch" style="--color:#f6eaf4"></div>
                 <div class="swatch-meta">
-                  <strong>Background Alt</strong>
+                  <strong>Фон alt</strong>
                   <span>#F6EAF4</span>
                 </div>
               </div>
               <div class="swatch-card">
                 <div class="swatch" style="--color:#2e2e2e"></div>
                 <div class="swatch-meta">
-                  <strong>Text Dark</strong>
+                  <strong>Текст основной</strong>
                   <span>#2E2E2E</span>
                 </div>
               </div>
               <div class="swatch-card">
                 <div class="swatch" style="--color:#776f7a"></div>
                 <div class="swatch-meta">
-                  <strong>Text Muted</strong>
+                  <strong>Текст muted</strong>
                   <span>#776F7A</span>
                 </div>
               </div>
               <div class="swatch-card">
                 <div class="swatch" style="--color:#111321"></div>
                 <div class="swatch-meta">
-                  <strong>Dark BG</strong>
+                  <strong>Темный фон</strong>
                   <span>#111321</span>
                 </div>
               </div>
               <div class="swatch-card">
                 <div class="swatch" style="--color:#0f62fe"></div>
                 <div class="swatch-meta">
-                  <strong>A11y Accent</strong>
+                  <strong>A11y акцент</strong>
                   <span>#0F62FE</span>
                 </div>
               </div>
             </div>
           </div>
           <div class="component-panel">
-            <h3>Typography</h3>
-            <p class="eyebrow">Font: Manrope, 16px base (18px in A11y)</p>
+            <h3>Типографика</h3>
+            <p class="eyebrow">Шрифт: Manrope, база 16px (18px в A11y)</p>
             <div class="type-block">
               <div class="type-row">
                 <div class="type-label">Display 48 / 700</div>
                 <div class="type-preview">
-                  <span style="font-size:48px;font-weight:700;line-height:1.2;">Hero headline</span>
-                  <small>For hero numbers and key stats</small>
+                  <span style="font-size:48px;font-weight:700;line-height:1.2;">Экранный заголовок</span>
+                  <small>Для героев и крупных чисел</small>
                 </div>
               </div>
               <div class="type-row">
                 <div class="type-label">H1 32 / 700</div>
                 <div class="type-preview">
-                  <span style="font-size:32px;font-weight:700;line-height:1.3;">Primary page title</span>
-                  <small>Pages and card headers</small>
+                  <span style="font-size:32px;font-weight:700;line-height:1.3;">Главный заголовок</span>
+                  <small>Страницы и верх карточек</small>
                 </div>
               </div>
               <div class="type-row">
                 <div class="type-label">H2 24 / 600</div>
                 <div class="type-preview">
-                  <span style="font-size:24px;font-weight:600;line-height:1.35;">Section subtitle</span>
-                  <small>Inside cards and modules</small>
+                  <span style="font-size:24px;font-weight:600;line-height:1.35;">Подзаголовок секции</span>
+                  <small>Внутри блоков и карт</small>
                 </div>
               </div>
               <div class="type-row">
                 <div class="type-label">H3 20 / 600</div>
                 <div class="type-preview">
-                  <span style="font-size:20px;font-weight:600;line-height:1.4;">Card heading</span>
-                  <small>Component titles</small>
+                  <span style="font-size:20px;font-weight:600;line-height:1.4;">Заголовок карточки</span>
+                  <small>Названия компонентов</small>
                 </div>
               </div>
               <div class="type-row">
                 <div class="type-label">Body 16 / 400</div>
                 <div class="type-preview">
-                  <span style="font-size:16px;font-weight:400;line-height:1.6;">Body copy and helper text</span>
-                  <small>Descriptions and labels</small>
+                  <span style="font-size:16px;font-weight:400;line-height:1.6;">Основной текст и пояснения</span>
+                  <small>Описания и лейблы</small>
                 </div>
               </div>
               <div class="type-row">
                 <div class="type-label">Caption 12 / 400</div>
                 <div class="type-preview">
-                  <span style="font-size:12px;font-weight:400;line-height:1.4;color:var(--text-muted);">Meta & status</span>
-                  <small>Hints and secondary text</small>
+                  <span style="font-size:12px;font-weight:400;line-height:1.4;color:var(--text-muted);">Статус и мета</span>
+                  <small>Хинты и вторичный текст</small>
                 </div>
               </div>
             </div>
@@ -706,7 +707,7 @@
 
         <div class="grid two">
           <div class="component-panel">
-            <h3>Grid / Layout</h3>
+            <h3>Сетка / Layout</h3>
             <div class="grid-map">
               <div class="layout">
                 <div class="col">1</div>
@@ -723,10 +724,10 @@
                 <div class="col">12</div>
               </div>
             </div>
-            <p class="eyebrow">Container padding: 24-56px desktop, 16px mobile</p>
+            <p class="eyebrow">Отступ контейнера: 24–56px (desktop), 16px (mobile)</p>
           </div>
           <div class="component-panel">
-            <h3>Spacing scale</h3>
+            <h3>Шкала отступов</h3>
             <div class="scale-line">
               <div class="scale-token" style="--w:8px">4</div>
               <div class="scale-token" style="--w:12px">8</div>
@@ -739,54 +740,54 @@
               <div class="scale-token" style="--w:60px">40</div>
               <div class="scale-token" style="--w:78px">56</div>
             </div>
-            <p class="eyebrow">Used for section, card, and button padding</p>
+            <p class="eyebrow">Используются в секциях, карточках и кнопках</p>
           </div>
         </div>
 
         <div class="grid two">
           <div class="component-panel">
-            <h3>Radius scale</h3>
+            <h3>Шкала радиусов</h3>
             <div class="radius-showcase">
               <div class="radius-box">
                 <div class="demo" style="--r:8px;"></div>
-                <span>8px - badges</span>
+                <span>8px — бейджи</span>
               </div>
               <div class="radius-box">
                 <div class="demo" style="--r:12px;"></div>
-                <span>12px - tabs, inputs</span>
+                <span>12px — табы, поля</span>
               </div>
               <div class="radius-box">
                 <div class="demo" style="--r:14px;"></div>
-                <span>14px - buttons</span>
+                <span>14px — кнопки</span>
               </div>
               <div class="radius-box">
                 <div class="demo" style="--r:16px;"></div>
-                <span>16px - cards</span>
+                <span>16px — карточки</span>
               </div>
               <div class="radius-box">
                 <div class="demo" style="--r:20px;"></div>
-                <span>20px - navigation</span>
+                <span>20px — навигация</span>
               </div>
               <div class="radius-box">
                 <div class="demo" style="--r:24px;"></div>
-                <span>24px - page shells</span>
+                <span>24px — оболочка страницы</span>
               </div>
             </div>
           </div>
           <div class="component-panel">
-            <h3>Shadow scale</h3>
+            <h3>Шкала теней</h3>
             <div class="shadow-showcase">
               <div class="shadow-box">
                 <div class="demo" style="--shadow:0 2px 6px rgba(0,0,0,0.04);"></div>
-                <span>XS - chips</span>
+                <span>XS — чипы</span>
               </div>
               <div class="shadow-box">
                 <div class="demo" style="--shadow:var(--shadow-soft);"></div>
-                <span>Base - cards</span>
+                <span>База — карточки</span>
               </div>
               <div class="shadow-box">
                 <div class="demo" style="--shadow:var(--shadow-strong);"></div>
-                <span>Focus - primary CTA</span>
+                <span>Фокус — primary CTA</span>
               </div>
             </div>
           </div>
@@ -794,46 +795,46 @@
       </section>
       <section class="section-card" id="components">
         <div class="section-header">
-          <h2>UI Components</h2>
-          <span>Buttons, form fields, icons, cards, navigation</span>
+          <h2>UI-компоненты</h2>
+          <span>Кнопки, поля ввода, иконки, карточки, навигация</span>
         </div>
         <div class="grid two">
           <div class="component-panel">
-            <h3>Buttons</h3>
+            <h3>Кнопки</h3>
             <div class="btn-row">
-              <button class="btn primary">Primary</button>
-              <button class="btn primary hover">Hover</button>
-              <button class="btn primary active">Pressed</button>
-              <button class="btn primary" disabled>Disabled</button>
+              <button class="btn primary">Основная</button>
+              <button class="btn primary hover">Наведение</button>
+              <button class="btn primary active">Нажатие</button>
+              <button class="btn primary" disabled>Отключена</button>
             </div>
             <div class="btn-row">
-              <button class="btn secondary">Secondary</button>
-              <button class="btn secondary hover">Hover</button>
-              <button class="btn secondary active">Pressed</button>
-              <button class="btn secondary" disabled>Disabled</button>
+              <button class="btn secondary">Вторичная</button>
+              <button class="btn secondary hover">Наведение</button>
+              <button class="btn secondary active">Нажатие</button>
+              <button class="btn secondary" disabled>Отключена</button>
             </div>
             <div class="btn-row">
               <button class="btn ghost">Ghost</button>
-              <button class="btn ghost hover">Hover</button>
-              <button class="btn ghost active">Pressed</button>
-              <button class="btn ghost" disabled>Disabled</button>
+              <button class="btn ghost hover">Наведение</button>
+              <button class="btn ghost active">Нажатие</button>
+              <button class="btn ghost" disabled>Отключена</button>
             </div>
           </div>
           <div class="component-panel">
-            <h3>Input / Form fields</h3>
+            <h3>Поля форм</h3>
             <div class="input-row">
               <div class="field">
                 <label>Email</label>
                 <input type="email" placeholder="name@domain.com" />
               </div>
               <div class="field">
-                <label>Password</label>
-                <input type="password" placeholder="••••••••" />
+                <label>Пароль</label>
+                <input type="password" placeholder="********" />
               </div>
               <div class="field">
-                <label>Course</label>
+                <label>Курс</label>
                 <select>
-                  <option>UX/UI Design</option>
+                  <option>UX/UI дизайн</option>
                   <option>Capstone Project</option>
                 </select>
               </div>
@@ -843,7 +844,7 @@
 
         <div class="grid two">
           <div class="component-panel">
-            <h3>Icons (Feather)</h3>
+            <h3>Иконки (Feather)</h3>
             <div class="icons-grid">
               <div class="icon-tile">
                 <i data-feather="home"></i>
@@ -880,52 +881,52 @@
             </div>
           </div>
           <div class="component-panel">
-            <h3>Cards</h3>
+            <h3>Карточки</h3>
             <div class="card-sample">
-              <div class="eyebrow">Course card</div>
-              <strong>UX/UI Design</strong>
-              <span class="pill" style="background:rgba(230,176,170,0.16);color:var(--accent-peach);border:none;">Progress 85%</span>
-              <p style="margin:0;color:var(--text-muted);">Lecturer: K. F. Imamadtionova, room 402</p>
+              <div class="eyebrow">Card / Course</div>
+              <strong>UX/UI дизайн</strong>
+              <span class="pill" style="background:rgba(230,176,170,0.16);color:var(--accent-peach);border:none;">Прогресс 85%</span>
+              <p style="margin:0;color:var(--text-muted);">Лектор: И. К. Ф., ауд. 402</p>
               <div class="progress"><span style="--value:85%;"></span></div>
             </div>
             <div class="card-sample" style="border-left:4px solid var(--accent-lilac);">
-              <div class="eyebrow">Notification</div>
-              <strong>Capstone retake</strong>
-              <p style="margin:0;color:var(--text-muted);">28 May 2025, 16:20</p>
+              <div class="eyebrow">Card / Notification</div>
+              <strong>Пересдача Capstone</strong>
+              <p style="margin:0;color:var(--text-muted);">28 мая 2025, 16:20</p>
             </div>
           </div>
         </div>
 
         <div class="component-panel">
-          <h3>Navigation</h3>
+          <h3>Навигация</h3>
           <div class="nav-bar">
-            <div class="nav-chip active">Dashboard</div>
-            <div class="nav-chip">Journal</div>
-            <div class="nav-chip">Schedule</div>
-            <div class="nav-chip">Notifications</div>
+            <div class="nav-chip active">Дашборд</div>
+            <div class="nav-chip">Журнал</div>
+            <div class="nav-chip">Расписание</div>
+            <div class="nav-chip">Уведомления</div>
           </div>
         </div>
       </section>
       <section class="section-card" id="states">
         <div class="section-header">
-          <h2>States & Patterns</h2>
-          <span>Hover, active, disabled, error, empty, responsive</span>
+          <h2>Состояния и паттерны</h2>
+          <span>Hover, Active, Disabled, Error, Empty, Adaptive</span>
         </div>
         <div class="grid three">
           <div class="state-card">
             <span class="state-tag">Hover</span>
-            <button class="btn primary hover">Hover</button>
-            <p style="margin:0;color:var(--text-muted);">Use on CTAs and navigation.</p>
+            <button class="btn primary hover">Наведение</button>
+            <p style="margin:0;color:var(--text-muted);">Для CTA и пунктов меню.</p>
           </div>
           <div class="state-card">
             <span class="state-tag">Active</span>
-            <button class="btn secondary active">Pressed</button>
-            <p style="margin:0;color:var(--text-muted);">Slight downward shift and inset shadow.</p>
+            <button class="btn secondary active">Нажато</button>
+            <p style="margin:0;color:var(--text-muted);">Легкое смещение вниз и внутренняя тень.</p>
           </div>
           <div class="state-card">
             <span class="state-tag">Disabled</span>
-            <button class="btn ghost" disabled>Disabled</button>
-            <p style="margin:0;color:var(--text-muted);">Lower opacity, remove shadow.</p>
+            <button class="btn ghost" disabled>Отключено</button>
+            <p style="margin:0;color:var(--text-muted);">Сниженная непрозрачность, без тени.</p>
           </div>
         </div>
 
@@ -933,41 +934,41 @@
           <div class="state-card">
             <span class="state-tag">Error</span>
             <div class="alert">
-              <strong>Submission failed</strong>
-              <p style="margin:4px 0 0;color:#b91c1c;">Check connection and retry.</p>
+              <strong>Не удалось отправить</strong>
+              <p style="margin:4px 0 0;color:#b91c1c;">Проверьте подключение и повторите.</p>
             </div>
           </div>
           <div class="state-card">
             <span class="state-tag">Empty</span>
             <div class="empty">
               <i data-feather="inbox"></i>
-              <p style="margin:6px 0 0;">No notifications yet.</p>
+              <p style="margin:6px 0 0;">Пока нет уведомлений.</p>
             </div>
           </div>
         </div>
 
         <div class="component-panel">
-          <h3>Responsive patterns</h3>
+          <h3>Адаптивные паттерны</h3>
           <div class="breakpoints">
             <div class="bp mobile">
               <div class="frame"></div>
               <div>
                 <strong>Mobile</strong>
-                <p style="margin:4px 0 0;color:var(--text-muted);">Stacked layout, 1 column, 16px padding.</p>
+                <p style="margin:4px 0 0;color:var(--text-muted);">Стек, 1 колонка, padding 16px.</p>
               </div>
             </div>
             <div class="bp tablet">
               <div class="frame"></div>
               <div>
                 <strong>Tablet</strong>
-                <p style="margin:4px 0 0;color:var(--text-muted);">2-3 columns auto-fit, 20px padding.</p>
+                <p style="margin:4px 0 0;color:var(--text-muted);">2–3 колонки auto-fit, padding 20px.</p>
               </div>
             </div>
             <div class="bp desktop">
               <div class="frame"></div>
               <div>
                 <strong>Desktop</strong>
-                <p style="margin:4px 0 0;color:var(--text-muted);">12 columns, dense cards and grids.</p>
+                <p style="margin:4px 0 0;color:var(--text-muted);">12 колонок, плотные сетки и карточки.</p>
               </div>
             </div>
           </div>
@@ -976,17 +977,17 @@
 
       <section class="section-card" id="guidelines">
         <div class="section-header">
-          <h2>Usage Guidelines</h2>
-          <span>Practical rules for consistent UI</span>
+          <h2>Рекомендации по использованию</h2>
+          <span>Правила для консистентного UI</span>
         </div>
         <div class="usage-list">
-          <div class="usage-item"><strong>Color:</strong> Use #6C5CE7 for primary CTAs, #A29BFE for secondary actions, #E6B0AA for warm highlights, #0F62FE for A11y/high-contrast accents.</div>
-          <div class="usage-item"><strong>Buttons:</strong> Primary for the main action on a screen; Secondary for supportive tasks; Ghost for neutral links inside cards.</div>
-          <div class="usage-item"><strong>Type:</strong> Base 16px (18px in A11y), H1 32px for page titles, Caption 12px for meta and statuses.</div>
-          <div class="usage-item"><strong>Spacing:</strong> Use 8/12/16/24/32px inside cards, 40-56px between sections; keep vertical rhythm consistent.</div>
-          <div class="usage-item"><strong>Grid:</strong> 12-column with 16px gap on desktop, auto-fit minmax(220-280px) for cards, container padding 24-56px.</div>
-          <div class="usage-item"><strong>Radius & shadows:</strong> 14px for buttons/fields, 16px for cards; soft shadow var(--shadow-soft) by default; remove shadows in high contrast.</div>
-          <div class="usage-item"><strong>States:</strong> Hover lifts with stronger shadow; Active adds light press; Disabled lowers opacity without animation.</div>
+          <div class="usage-item"><strong>Цвет:</strong> #6C5CE7 для основных CTA, #A29BFE для вторичных действий, #E6B0AA для теплых подсветок, #0F62FE для A11y/высокого контраста.</div>
+          <div class="usage-item"><strong>Кнопки:</strong> Основная — главное действие экрана; Вторичная — поддерживающее; Ghost — нейтральные ссылки в карточках.</div>
+          <div class="usage-item"><strong>Типографика:</strong> База 16px (18px в A11y), H1 32px для заголовков страниц, Caption 12px для статусов.</div>
+          <div class="usage-item"><strong>Отступы:</strong> 8/12/16/24/32px внутри карточек, 40–56px между секциями; держите вертикальный ритм.</div>
+          <div class="usage-item"><strong>Сетка:</strong> 12 колонок с gap 16px на desktop, auto-fit minmax(220–280px) для карточек, padding контейнера 24–56px.</div>
+          <div class="usage-item"><strong>Радиусы и тени:</strong> 14px для кнопок/полей, 16px для карточек; мягкая тень var(--shadow-soft) по умолчанию, отключайте тени в high-contrast.</div>
+          <div class="usage-item"><strong>Состояния:</strong> Hover — подъем и усиленная тень; Active — легкое нажатие; Disabled — сниженная прозрачность без анимации.</div>
         </div>
       </section>
     </div>
